@@ -12,6 +12,7 @@
 		2C36742C1D99BAFF0035B7F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C36742A1D99BAFF0035B7F0 /* Main.storyboard */; };
 		2C36742E1D99BAFF0035B7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C36742D1D99BAFF0035B7F0 /* Assets.xcassets */; };
 		2C3674311D99BAFF0035B7F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C36742F1D99BAFF0035B7F0 /* LaunchScreen.storyboard */; };
+		718D9524BA294E2B19240C81 /* Pods_VanguardLock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8ABD530AED5F2A46FF1F29 /* Pods_VanguardLock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		2C36742D1D99BAFF0035B7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3674301D99BAFF0035B7F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C3674321D99BAFF0035B7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53851816C6487B084E80CA63 /* Pods-VanguardLock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanguardLock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VanguardLock/Pods-VanguardLock.debug.xcconfig"; sourceTree = "<group>"; };
+		AD8ABD530AED5F2A46FF1F29 /* Pods_VanguardLock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VanguardLock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C399C1330126270B61075A37 /* Pods-VanguardLock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanguardLock.release.xcconfig"; path = "Pods/Target Support Files/Pods-VanguardLock/Pods-VanguardLock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718D9524BA294E2B19240C81 /* Pods_VanguardLock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CDE546FACE308BFB79A4233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD8ABD530AED5F2A46FF1F29 /* Pods_VanguardLock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2C36741A1D99BAFE0035B7F0 = {
 			isa = PBXGroup;
 			children = (
 				2C3674251D99BAFF0035B7F0 /* VanguardLock */,
 				2C3674241D99BAFF0035B7F0 /* Products */,
+				B60A8CB33465A7A3E73C6C07 /* Pods */,
+				0CDE546FACE308BFB79A4233 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = VanguardLock;
 			sourceTree = "<group>";
 		};
+		B60A8CB33465A7A3E73C6C07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53851816C6487B084E80CA63 /* Pods-VanguardLock.debug.xcconfig */,
+				C399C1330126270B61075A37 /* Pods-VanguardLock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C3674351D99BAFF0035B7F0 /* Build configuration list for PBXNativeTarget "VanguardLock" */;
 			buildPhases = (
+				11F08FF0F4E96504AC705D78 /* [CP] Check Pods Manifest.lock */,
 				2C36741F1D99BAFE0035B7F0 /* Sources */,
 				2C3674201D99BAFE0035B7F0 /* Frameworks */,
 				2C3674211D99BAFE0035B7F0 /* Resources */,
+				EF53527FC22F94A1AFA576BE /* [CP] Embed Pods Frameworks */,
+				4F67E054FF51E0DA20CC3574 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +123,7 @@
 				TargetAttributes = {
 					2C3674221D99BAFE0035B7F0 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = UH8XQ58787;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11F08FF0F4E96504AC705D78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4F67E054FF51E0DA20CC3574 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VanguardLock/Pods-VanguardLock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF53527FC22F94A1AFA576BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VanguardLock/Pods-VanguardLock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C36741F1D99BAFE0035B7F0 /* Sources */ = {
@@ -258,8 +334,10 @@
 		};
 		2C3674361D99BAFF0035B7F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53851816C6487B084E80CA63 /* Pods-VanguardLock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UH8XQ58787;
 				INFOPLIST_FILE = VanguardLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exercise2.VanguardLock;
@@ -270,8 +348,10 @@
 		};
 		2C3674371D99BAFF0035B7F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C399C1330126270B61075A37 /* Pods-VanguardLock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UH8XQ58787;
 				INFOPLIST_FILE = VanguardLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exercise2.VanguardLock;
@@ -299,6 +379,7 @@
 				2C3674371D99BAFF0035B7F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12FE7FC71DADA79800AC0167 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FE7FC51DADA79800AC0167 /* Bolts.framework */; };
+		12FE7FC81DADA79800AC0167 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FE7FC61DADA79800AC0167 /* Parse.framework */; };
 		2C3674271D99BAFF0035B7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3674261D99BAFF0035B7F0 /* AppDelegate.swift */; };
 		2C3674291D99BAFF0035B7F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3674281D99BAFF0035B7F0 /* ViewController.swift */; };
 		2C36742C1D99BAFF0035B7F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C36742A1D99BAFF0035B7F0 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12FE7FC51DADA79800AC0167 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
+		12FE7FC61DADA79800AC0167 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
 		2C3674231D99BAFF0035B7F0 /* VanguardLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VanguardLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3674261D99BAFF0035B7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3674281D99BAFF0035B7F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FE7FC71DADA79800AC0167 /* Bolts.framework in Frameworks */,
+				12FE7FC81DADA79800AC0167 /* Parse.framework in Frameworks */,
 				718D9524BA294E2B19240C81 /* Pods_VanguardLock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +49,8 @@
 		0CDE546FACE308BFB79A4233 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12FE7FC51DADA79800AC0167 /* Bolts.framework */,
+				12FE7FC61DADA79800AC0167 /* Parse.framework */,
 				AD8ABD530AED5F2A46FF1F29 /* Pods_VanguardLock.framework */,
 			);
 			name = Frameworks;
@@ -257,6 +265,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -307,6 +316,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -338,6 +348,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UH8XQ58787;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
+				);
 				INFOPLIST_FILE = VanguardLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exercise2.VanguardLock;
@@ -352,6 +367,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UH8XQ58787;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
+				);
 				INFOPLIST_FILE = VanguardLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = exercise2.VanguardLock;

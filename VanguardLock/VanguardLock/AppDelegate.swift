@@ -2,12 +2,11 @@
 //  AppDelegate.swift
 //  VanguardLock
 //
-//  Created by Michael Nguyen on 9/26/16.
+//  Created by Michael Nguyen on 10/23/16.
 //  Copyright © 2016 Michael Nguyen. All rights reserved.
 //
 
 import UIKit
-import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,10 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Parse.enableLocalDatastore()
-        Parse.setApplicationId("4Uf3QAMsItDcgSxPNBDb2lOL5tGvPPlbzI35sZbw", clientKey: " ")
-        PFAnalytics.trackAppOpened(launchOptions: launchOptions)
-        
         return true
     }
 

@@ -7,108 +7,213 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12FE7FC71DADA79800AC0167 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FE7FC51DADA79800AC0167 /* Bolts.framework */; };
-		12FE7FC81DADA79800AC0167 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FE7FC61DADA79800AC0167 /* Parse.framework */; };
-		2C3674271D99BAFF0035B7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3674261D99BAFF0035B7F0 /* AppDelegate.swift */; };
-		2C3674291D99BAFF0035B7F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3674281D99BAFF0035B7F0 /* ViewController.swift */; };
-		2C36742C1D99BAFF0035B7F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C36742A1D99BAFF0035B7F0 /* Main.storyboard */; };
-		2C36742E1D99BAFF0035B7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C36742D1D99BAFF0035B7F0 /* Assets.xcassets */; };
-		2C3674311D99BAFF0035B7F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C36742F1D99BAFF0035B7F0 /* LaunchScreen.storyboard */; };
-		718D9524BA294E2B19240C81 /* Pods_VanguardLock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8ABD530AED5F2A46FF1F29 /* Pods_VanguardLock.framework */; };
+		1241225D1DBD648A00D18C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241225C1DBD648A00D18C9C /* AppDelegate.swift */; };
+		1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241225E1DBD648A00D18C9C /* HomeViewController.swift */; };
+		124122621DBD648A00D18C9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124122601DBD648A00D18C9C /* Main.storyboard */; };
+		124122641DBD648A00D18C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124122631DBD648A00D18C9C /* Assets.xcassets */; };
+		124122671DBD648A00D18C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124122651DBD648A00D18C9C /* LaunchScreen.storyboard */; };
+		124122721DBD648A00D18C9C /* VanguardLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124122711DBD648A00D18C9C /* VanguardLockTests.swift */; };
+		1241227D1DBD648A00D18C9C /* VanguardLockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241227C1DBD648A00D18C9C /* VanguardLockUITests.swift */; };
+		1241228C1DBD661C00D18C9C /* Cloud-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 1241228B1DBD661C00D18C9C /* Cloud-96.png */; };
+		1241228E1DBD662100D18C9C /* Password Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 1241228D1DBD662100D18C9C /* Password Filled-100.png */; };
+		124122941DBD663E00D18C9C /* Add Key Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1241228F1DBD663E00D18C9C /* Add Key Filled-50.png */; };
+		124122951DBD663E00D18C9C /* Lock Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122901DBD663E00D18C9C /* Lock Filled-100.png */; };
+		124122961DBD663E00D18C9C /* Unlock Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122911DBD663E00D18C9C /* Unlock Filled-100.png */; };
+		124122971DBD663E00D18C9C /* Add User Male-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122921DBD663E00D18C9C /* Add User Male-100.png */; };
+		124122981DBD663E00D18C9C /* Message-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122931DBD663E00D18C9C /* Message-50.png */; };
+		1241229A1DBD669400D18C9C /* Exit-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122991DBD669400D18C9C /* Exit-50.png */; };
+		1241229D1DBD67D200D18C9C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241229C1DBD67D200D18C9C /* LoginViewController.swift */; };
+		1241229F1DBD682300D18C9C /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241229E1DBD682300D18C9C /* RegistrationViewController.swift */; };
+		124122A11DBD698A00D18C9C /* Contacts-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122A01DBD698A00D18C9C /* Contacts-100.png */; };
+		124122A31DBD699800D18C9C /* Password Check-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122A21DBD699800D18C9C /* Password Check-50.png */; };
+		124122A51DBD7CD400D18C9C /* userInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */; };
+		124122B41DBDA84A00D18C9C /* Home Automation-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B21DBDA84A00D18C9C /* Home Automation-30.png */; };
+		124122B51DBDA84A00D18C9C /* Home Automation Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B31DBDA84A00D18C9C /* Home Automation Filled-30.png */; };
+		124122BC1DBE598700D18C9C /* Key Filled-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B61DBE598700D18C9C /* Key Filled-75.png */; };
+		124122BD1DBE598700D18C9C /* Key Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B71DBE598700D18C9C /* Key Filled-50.png */; };
+		124122BE1DBE598700D18C9C /* Key Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B81DBE598700D18C9C /* Key Filled-30.png */; };
+		124122BF1DBE598700D18C9C /* Key_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B91DBE598700D18C9C /* Key_75.png */; };
+		124122C01DBE598700D18C9C /* Key-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122BA1DBE598700D18C9C /* Key-30.png */; };
+		124122C11DBE598700D18C9C /* Key-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122BB1DBE598700D18C9C /* Key-50.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1241226E1DBD648A00D18C9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 124122511DBD648A00D18C9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 124122581DBD648A00D18C9C;
+			remoteInfo = VanguardLock;
+		};
+		124122791DBD648A00D18C9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 124122511DBD648A00D18C9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 124122581DBD648A00D18C9C;
+			remoteInfo = VanguardLock;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		12FE7FC51DADA79800AC0167 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
-		12FE7FC61DADA79800AC0167 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
-		2C3674231D99BAFF0035B7F0 /* VanguardLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VanguardLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C3674261D99BAFF0035B7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C3674281D99BAFF0035B7F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C36742B1D99BAFF0035B7F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2C36742D1D99BAFF0035B7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2C3674301D99BAFF0035B7F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2C3674321D99BAFF0035B7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53851816C6487B084E80CA63 /* Pods-VanguardLock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanguardLock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VanguardLock/Pods-VanguardLock.debug.xcconfig"; sourceTree = "<group>"; };
-		AD8ABD530AED5F2A46FF1F29 /* Pods_VanguardLock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VanguardLock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C399C1330126270B61075A37 /* Pods-VanguardLock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VanguardLock.release.xcconfig"; path = "Pods/Target Support Files/Pods-VanguardLock/Pods-VanguardLock.release.xcconfig"; sourceTree = "<group>"; };
+		124122591DBD648A00D18C9C /* VanguardLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VanguardLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1241225C1DBD648A00D18C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1241225E1DBD648A00D18C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		124122611DBD648A00D18C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		124122631DBD648A00D18C9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		124122661DBD648A00D18C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		124122681DBD648A00D18C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1241226D1DBD648A00D18C9C /* VanguardLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VanguardLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		124122711DBD648A00D18C9C /* VanguardLockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanguardLockTests.swift; sourceTree = "<group>"; };
+		124122731DBD648A00D18C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		124122781DBD648A00D18C9C /* VanguardLockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VanguardLockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1241227C1DBD648A00D18C9C /* VanguardLockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanguardLockUITests.swift; sourceTree = "<group>"; };
+		1241227E1DBD648A00D18C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1241228B1DBD661C00D18C9C /* Cloud-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cloud-96.png"; sourceTree = "<group>"; };
+		1241228D1DBD662100D18C9C /* Password Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Password Filled-100.png"; sourceTree = "<group>"; };
+		1241228F1DBD663E00D18C9C /* Add Key Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add Key Filled-50.png"; sourceTree = "<group>"; };
+		124122901DBD663E00D18C9C /* Lock Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lock Filled-100.png"; sourceTree = "<group>"; };
+		124122911DBD663E00D18C9C /* Unlock Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unlock Filled-100.png"; sourceTree = "<group>"; };
+		124122921DBD663E00D18C9C /* Add User Male-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add User Male-100.png"; sourceTree = "<group>"; };
+		124122931DBD663E00D18C9C /* Message-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message-50.png"; sourceTree = "<group>"; };
+		124122991DBD669400D18C9C /* Exit-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Exit-50.png"; sourceTree = "<group>"; };
+		1241229C1DBD67D200D18C9C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1241229E1DBD682300D18C9C /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		124122A01DBD698A00D18C9C /* Contacts-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contacts-100.png"; sourceTree = "<group>"; };
+		124122A21DBD699800D18C9C /* Password Check-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Password Check-50.png"; sourceTree = "<group>"; };
+		124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInterfaceViewController.swift; sourceTree = "<group>"; };
+		124122B21DBDA84A00D18C9C /* Home Automation-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home Automation-30.png"; sourceTree = "<group>"; };
+		124122B31DBDA84A00D18C9C /* Home Automation Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home Automation Filled-30.png"; sourceTree = "<group>"; };
+		124122B61DBE598700D18C9C /* Key Filled-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key Filled-75.png"; sourceTree = "<group>"; };
+		124122B71DBE598700D18C9C /* Key Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key Filled-50.png"; sourceTree = "<group>"; };
+		124122B81DBE598700D18C9C /* Key Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key Filled-30.png"; sourceTree = "<group>"; };
+		124122B91DBE598700D18C9C /* Key_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Key_75.png; sourceTree = "<group>"; };
+		124122BA1DBE598700D18C9C /* Key-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key-30.png"; sourceTree = "<group>"; };
+		124122BB1DBE598700D18C9C /* Key-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key-50.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C3674201D99BAFE0035B7F0 /* Frameworks */ = {
+		124122561DBD648A00D18C9C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FE7FC71DADA79800AC0167 /* Bolts.framework in Frameworks */,
-				12FE7FC81DADA79800AC0167 /* Parse.framework in Frameworks */,
-				718D9524BA294E2B19240C81 /* Pods_VanguardLock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1241226A1DBD648A00D18C9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124122751DBD648A00D18C9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CDE546FACE308BFB79A4233 /* Frameworks */ = {
+		124122501DBD648A00D18C9C = {
 			isa = PBXGroup;
 			children = (
-				12FE7FC51DADA79800AC0167 /* Bolts.framework */,
-				12FE7FC61DADA79800AC0167 /* Parse.framework */,
-				AD8ABD530AED5F2A46FF1F29 /* Pods_VanguardLock.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2C36741A1D99BAFE0035B7F0 = {
-			isa = PBXGroup;
-			children = (
-				2C3674251D99BAFF0035B7F0 /* VanguardLock */,
-				2C3674241D99BAFF0035B7F0 /* Products */,
-				B60A8CB33465A7A3E73C6C07 /* Pods */,
-				0CDE546FACE308BFB79A4233 /* Frameworks */,
+				1241225B1DBD648A00D18C9C /* VanguardLock */,
+				124122701DBD648A00D18C9C /* VanguardLockTests */,
+				1241227B1DBD648A00D18C9C /* VanguardLockUITests */,
+				1241225A1DBD648A00D18C9C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2C3674241D99BAFF0035B7F0 /* Products */ = {
+		1241225A1DBD648A00D18C9C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C3674231D99BAFF0035B7F0 /* VanguardLock.app */,
+				124122591DBD648A00D18C9C /* VanguardLock.app */,
+				1241226D1DBD648A00D18C9C /* VanguardLockTests.xctest */,
+				124122781DBD648A00D18C9C /* VanguardLockUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C3674251D99BAFF0035B7F0 /* VanguardLock */ = {
+		1241225B1DBD648A00D18C9C /* VanguardLock */ = {
 			isa = PBXGroup;
 			children = (
-				2C3674261D99BAFF0035B7F0 /* AppDelegate.swift */,
-				2C3674281D99BAFF0035B7F0 /* ViewController.swift */,
-				2C36742A1D99BAFF0035B7F0 /* Main.storyboard */,
-				2C36742D1D99BAFF0035B7F0 /* Assets.xcassets */,
-				2C36742F1D99BAFF0035B7F0 /* LaunchScreen.storyboard */,
-				2C3674321D99BAFF0035B7F0 /* Info.plist */,
+				1241229B1DBD67B100D18C9C /* controllers */,
+				1241225C1DBD648A00D18C9C /* AppDelegate.swift */,
+				124122601DBD648A00D18C9C /* Main.storyboard */,
+				124122631DBD648A00D18C9C /* Assets.xcassets */,
+				1241228A1DBD661000D18C9C /* Images */,
+				124122651DBD648A00D18C9C /* LaunchScreen.storyboard */,
+				124122681DBD648A00D18C9C /* Info.plist */,
 			);
 			path = VanguardLock;
 			sourceTree = "<group>";
 		};
-		B60A8CB33465A7A3E73C6C07 /* Pods */ = {
+		124122701DBD648A00D18C9C /* VanguardLockTests */ = {
 			isa = PBXGroup;
 			children = (
-				53851816C6487B084E80CA63 /* Pods-VanguardLock.debug.xcconfig */,
-				C399C1330126270B61075A37 /* Pods-VanguardLock.release.xcconfig */,
+				124122711DBD648A00D18C9C /* VanguardLockTests.swift */,
+				124122731DBD648A00D18C9C /* Info.plist */,
 			);
-			name = Pods;
+			path = VanguardLockTests;
+			sourceTree = "<group>";
+		};
+		1241227B1DBD648A00D18C9C /* VanguardLockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1241227C1DBD648A00D18C9C /* VanguardLockUITests.swift */,
+				1241227E1DBD648A00D18C9C /* Info.plist */,
+			);
+			path = VanguardLockUITests;
+			sourceTree = "<group>";
+		};
+		1241228A1DBD661000D18C9C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				124122B61DBE598700D18C9C /* Key Filled-75.png */,
+				124122B71DBE598700D18C9C /* Key Filled-50.png */,
+				124122B81DBE598700D18C9C /* Key Filled-30.png */,
+				124122B91DBE598700D18C9C /* Key_75.png */,
+				124122BA1DBE598700D18C9C /* Key-30.png */,
+				124122BB1DBE598700D18C9C /* Key-50.png */,
+				124122B21DBDA84A00D18C9C /* Home Automation-30.png */,
+				124122B31DBDA84A00D18C9C /* Home Automation Filled-30.png */,
+				124122A21DBD699800D18C9C /* Password Check-50.png */,
+				124122A01DBD698A00D18C9C /* Contacts-100.png */,
+				124122991DBD669400D18C9C /* Exit-50.png */,
+				1241228F1DBD663E00D18C9C /* Add Key Filled-50.png */,
+				124122901DBD663E00D18C9C /* Lock Filled-100.png */,
+				124122911DBD663E00D18C9C /* Unlock Filled-100.png */,
+				124122921DBD663E00D18C9C /* Add User Male-100.png */,
+				124122931DBD663E00D18C9C /* Message-50.png */,
+				1241228D1DBD662100D18C9C /* Password Filled-100.png */,
+				1241228B1DBD661C00D18C9C /* Cloud-96.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		1241229B1DBD67B100D18C9C /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1241225E1DBD648A00D18C9C /* HomeViewController.swift */,
+				1241229C1DBD67D200D18C9C /* LoginViewController.swift */,
+				1241229E1DBD682300D18C9C /* RegistrationViewController.swift */,
+				124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C3674221D99BAFE0035B7F0 /* VanguardLock */ = {
+		124122581DBD648A00D18C9C /* VanguardLock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C3674351D99BAFF0035B7F0 /* Build configuration list for PBXNativeTarget "VanguardLock" */;
+			buildConfigurationList = 124122811DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLock" */;
 			buildPhases = (
-				11F08FF0F4E96504AC705D78 /* [CP] Check Pods Manifest.lock */,
-				2C36741F1D99BAFE0035B7F0 /* Sources */,
-				2C3674201D99BAFE0035B7F0 /* Frameworks */,
-				2C3674211D99BAFE0035B7F0 /* Resources */,
-				EF53527FC22F94A1AFA576BE /* [CP] Embed Pods Frameworks */,
-				4F67E054FF51E0DA20CC3574 /* [CP] Copy Pods Resources */,
+				124122551DBD648A00D18C9C /* Sources */,
+				124122561DBD648A00D18C9C /* Frameworks */,
+				124122571DBD648A00D18C9C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -116,27 +221,73 @@
 			);
 			name = VanguardLock;
 			productName = VanguardLock;
-			productReference = 2C3674231D99BAFF0035B7F0 /* VanguardLock.app */;
+			productReference = 124122591DBD648A00D18C9C /* VanguardLock.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1241226C1DBD648A00D18C9C /* VanguardLockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 124122841DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockTests" */;
+			buildPhases = (
+				124122691DBD648A00D18C9C /* Sources */,
+				1241226A1DBD648A00D18C9C /* Frameworks */,
+				1241226B1DBD648A00D18C9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1241226F1DBD648A00D18C9C /* PBXTargetDependency */,
+			);
+			name = VanguardLockTests;
+			productName = VanguardLockTests;
+			productReference = 1241226D1DBD648A00D18C9C /* VanguardLockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		124122771DBD648A00D18C9C /* VanguardLockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 124122871DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockUITests" */;
+			buildPhases = (
+				124122741DBD648A00D18C9C /* Sources */,
+				124122751DBD648A00D18C9C /* Frameworks */,
+				124122761DBD648A00D18C9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1241227A1DBD648A00D18C9C /* PBXTargetDependency */,
+			);
+			name = VanguardLockUITests;
+			productName = VanguardLockUITests;
+			productReference = 124122781DBD648A00D18C9C /* VanguardLockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2C36741B1D99BAFE0035B7F0 /* Project object */ = {
+		124122511DBD648A00D18C9C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Michael Nguyen";
 				TargetAttributes = {
-					2C3674221D99BAFE0035B7F0 = {
+					124122581DBD648A00D18C9C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = UH8XQ58787;
 						ProvisioningStyle = Automatic;
 					};
+					1241226C1DBD648A00D18C9C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 124122581DBD648A00D18C9C;
+					};
+					124122771DBD648A00D18C9C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 124122581DBD648A00D18C9C;
+					};
 				};
 			};
-			buildConfigurationList = 2C36741E1D99BAFE0035B7F0 /* Build configuration list for PBXProject "VanguardLock" */;
+			buildConfigurationList = 124122541DBD648A00D18C9C /* Build configuration list for PBXProject "VanguardLock" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -144,102 +295,120 @@
 				en,
 				Base,
 			);
-			mainGroup = 2C36741A1D99BAFE0035B7F0;
-			productRefGroup = 2C3674241D99BAFF0035B7F0 /* Products */;
+			mainGroup = 124122501DBD648A00D18C9C;
+			productRefGroup = 1241225A1DBD648A00D18C9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C3674221D99BAFE0035B7F0 /* VanguardLock */,
+				124122581DBD648A00D18C9C /* VanguardLock */,
+				1241226C1DBD648A00D18C9C /* VanguardLockTests */,
+				124122771DBD648A00D18C9C /* VanguardLockUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C3674211D99BAFE0035B7F0 /* Resources */ = {
+		124122571DBD648A00D18C9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C3674311D99BAFF0035B7F0 /* LaunchScreen.storyboard in Resources */,
-				2C36742E1D99BAFF0035B7F0 /* Assets.xcassets in Resources */,
-				2C36742C1D99BAFF0035B7F0 /* Main.storyboard in Resources */,
+				124122971DBD663E00D18C9C /* Add User Male-100.png in Resources */,
+				124122941DBD663E00D18C9C /* Add Key Filled-50.png in Resources */,
+				124122671DBD648A00D18C9C /* LaunchScreen.storyboard in Resources */,
+				124122BE1DBE598700D18C9C /* Key Filled-30.png in Resources */,
+				124122BF1DBE598700D18C9C /* Key_75.png in Resources */,
+				124122961DBD663E00D18C9C /* Unlock Filled-100.png in Resources */,
+				124122B51DBDA84A00D18C9C /* Home Automation Filled-30.png in Resources */,
+				124122C11DBE598700D18C9C /* Key-50.png in Resources */,
+				124122951DBD663E00D18C9C /* Lock Filled-100.png in Resources */,
+				124122BC1DBE598700D18C9C /* Key Filled-75.png in Resources */,
+				124122641DBD648A00D18C9C /* Assets.xcassets in Resources */,
+				124122BD1DBE598700D18C9C /* Key Filled-50.png in Resources */,
+				1241228E1DBD662100D18C9C /* Password Filled-100.png in Resources */,
+				124122B41DBDA84A00D18C9C /* Home Automation-30.png in Resources */,
+				1241228C1DBD661C00D18C9C /* Cloud-96.png in Resources */,
+				124122C01DBE598700D18C9C /* Key-30.png in Resources */,
+				124122A31DBD699800D18C9C /* Password Check-50.png in Resources */,
+				124122A11DBD698A00D18C9C /* Contacts-100.png in Resources */,
+				124122981DBD663E00D18C9C /* Message-50.png in Resources */,
+				1241229A1DBD669400D18C9C /* Exit-50.png in Resources */,
+				124122621DBD648A00D18C9C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1241226B1DBD648A00D18C9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124122761DBD648A00D18C9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		11F08FF0F4E96504AC705D78 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4F67E054FF51E0DA20CC3574 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VanguardLock/Pods-VanguardLock-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF53527FC22F94A1AFA576BE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VanguardLock/Pods-VanguardLock-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		2C36741F1D99BAFE0035B7F0 /* Sources */ = {
+		124122551DBD648A00D18C9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C3674291D99BAFF0035B7F0 /* ViewController.swift in Sources */,
-				2C3674271D99BAFF0035B7F0 /* AppDelegate.swift in Sources */,
+				1241229D1DBD67D200D18C9C /* LoginViewController.swift in Sources */,
+				1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */,
+				1241229F1DBD682300D18C9C /* RegistrationViewController.swift in Sources */,
+				1241225D1DBD648A00D18C9C /* AppDelegate.swift in Sources */,
+				124122A51DBD7CD400D18C9C /* userInterfaceViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124122691DBD648A00D18C9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				124122721DBD648A00D18C9C /* VanguardLockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124122741DBD648A00D18C9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1241227D1DBD648A00D18C9C /* VanguardLockUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1241226F1DBD648A00D18C9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 124122581DBD648A00D18C9C /* VanguardLock */;
+			targetProxy = 1241226E1DBD648A00D18C9C /* PBXContainerItemProxy */;
+		};
+		1241227A1DBD648A00D18C9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 124122581DBD648A00D18C9C /* VanguardLock */;
+			targetProxy = 124122791DBD648A00D18C9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		2C36742A1D99BAFF0035B7F0 /* Main.storyboard */ = {
+		124122601DBD648A00D18C9C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2C36742B1D99BAFF0035B7F0 /* Base */,
+				124122611DBD648A00D18C9C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2C36742F1D99BAFF0035B7F0 /* LaunchScreen.storyboard */ = {
+		124122651DBD648A00D18C9C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2C3674301D99BAFF0035B7F0 /* Base */,
+				124122661DBD648A00D18C9C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -247,7 +416,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2C3674331D99BAFF0035B7F0 /* Debug */ = {
+		1241227F1DBD648A00D18C9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -265,7 +434,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -298,7 +466,7 @@
 			};
 			name = Debug;
 		};
-		2C3674341D99BAFF0035B7F0 /* Release */ = {
+		124122801DBD648A00D18C9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -316,7 +484,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -342,66 +509,123 @@
 			};
 			name = Release;
 		};
-		2C3674361D99BAFF0035B7F0 /* Debug */ = {
+		124122821DBD648A00D18C9C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53851816C6487B084E80CA63 /* Pods-VanguardLock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UH8XQ58787;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
-				);
 				INFOPLIST_FILE = VanguardLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = exercise2.VanguardLock;
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		2C3674371D99BAFF0035B7F0 /* Release */ = {
+		124122831DBD648A00D18C9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C399C1330126270B61075A37 /* Pods-VanguardLock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UH8XQ58787;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
-				);
 				INFOPLIST_FILE = VanguardLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = exercise2.VanguardLock;
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		124122851DBD648A00D18C9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VanguardLockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VanguardLock.app/VanguardLock";
+			};
+			name = Debug;
+		};
+		124122861DBD648A00D18C9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VanguardLockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VanguardLock.app/VanguardLock";
+			};
+			name = Release;
+		};
+		124122881DBD648A00D18C9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = VanguardLockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = VanguardLock;
+			};
+			name = Debug;
+		};
+		124122891DBD648A00D18C9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = VanguardLockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = VanguardLock;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C36741E1D99BAFE0035B7F0 /* Build configuration list for PBXProject "VanguardLock" */ = {
+		124122541DBD648A00D18C9C /* Build configuration list for PBXProject "VanguardLock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C3674331D99BAFF0035B7F0 /* Debug */,
-				2C3674341D99BAFF0035B7F0 /* Release */,
+				1241227F1DBD648A00D18C9C /* Debug */,
+				124122801DBD648A00D18C9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C3674351D99BAFF0035B7F0 /* Build configuration list for PBXNativeTarget "VanguardLock" */ = {
+		124122811DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C3674361D99BAFF0035B7F0 /* Debug */,
-				2C3674371D99BAFF0035B7F0 /* Release */,
+				124122821DBD648A00D18C9C /* Debug */,
+				124122831DBD648A00D18C9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		124122841DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				124122851DBD648A00D18C9C /* Debug */,
+				124122861DBD648A00D18C9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		124122871DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				124122881DBD648A00D18C9C /* Debug */,
+				124122891DBD648A00D18C9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2C36741B1D99BAFE0035B7F0 /* Project object */;
+	rootObject = 124122511DBD648A00D18C9C /* Project object */;
 }

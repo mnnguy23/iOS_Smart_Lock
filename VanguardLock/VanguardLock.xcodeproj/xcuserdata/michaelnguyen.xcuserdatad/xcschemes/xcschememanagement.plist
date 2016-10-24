@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>VanguardLock.xcscheme_^#shared#^_</key>
+		<key>VanguardLock.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2C3674221D99BAFE0035B7F0</key>
+		<key>124122581DBD648A00D18C9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1241226C1DBD648A00D18C9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>124122771DBD648A00D18C9C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

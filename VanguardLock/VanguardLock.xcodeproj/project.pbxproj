@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210023C1DC7F3720079C7AA /* AddLockViewController.swift */; };
 		1241225D1DBD648A00D18C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241225C1DBD648A00D18C9C /* AppDelegate.swift */; };
 		1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241225E1DBD648A00D18C9C /* HomeViewController.swift */; };
 		124122621DBD648A00D18C9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124122601DBD648A00D18C9C /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 		124122BF1DBE598700D18C9C /* Key_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B91DBE598700D18C9C /* Key_75.png */; };
 		124122C01DBE598700D18C9C /* Key-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122BA1DBE598700D18C9C /* Key-30.png */; };
 		124122C11DBE598700D18C9C /* Key-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122BB1DBE598700D18C9C /* Key-50.png */; };
+		124122C31DBE8AAF00D18C9C /* Door Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122C21DBE8AAF00D18C9C /* Door Filled-50.png */; };
+		12625A4C1DC7CE430021528A /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4B1DC7CE430021528A /* Lock.swift */; };
+		12625A4E1DC7D2270021528A /* VirtualKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4D1DC7D2270021528A /* VirtualKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1210023C1DC7F3720079C7AA /* AddLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLockViewController.swift; sourceTree = "<group>"; };
 		124122591DBD648A00D18C9C /* VanguardLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VanguardLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1241225C1DBD648A00D18C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1241225E1DBD648A00D18C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +94,9 @@
 		124122B91DBE598700D18C9C /* Key_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Key_75.png; sourceTree = "<group>"; };
 		124122BA1DBE598700D18C9C /* Key-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key-30.png"; sourceTree = "<group>"; };
 		124122BB1DBE598700D18C9C /* Key-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key-50.png"; sourceTree = "<group>"; };
+		124122C21DBE8AAF00D18C9C /* Door Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Door Filled-50.png"; sourceTree = "<group>"; };
+		12625A4B1DC7CE430021528A /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		12625A4D1DC7D2270021528A /* VirtualKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,11 +147,12 @@
 		1241225B1DBD648A00D18C9C /* VanguardLock */ = {
 			isa = PBXGroup;
 			children = (
+				12625A4A1DC7CE2B0021528A /* classes */,
 				1241229B1DBD67B100D18C9C /* controllers */,
 				1241225C1DBD648A00D18C9C /* AppDelegate.swift */,
 				124122601DBD648A00D18C9C /* Main.storyboard */,
 				124122631DBD648A00D18C9C /* Assets.xcassets */,
-				1241228A1DBD661000D18C9C /* Images */,
+				1241228A1DBD661000D18C9C /* images */,
 				124122651DBD648A00D18C9C /* LaunchScreen.storyboard */,
 				124122681DBD648A00D18C9C /* Info.plist */,
 			);
@@ -168,9 +177,10 @@
 			path = VanguardLockUITests;
 			sourceTree = "<group>";
 		};
-		1241228A1DBD661000D18C9C /* Images */ = {
+		1241228A1DBD661000D18C9C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				124122C21DBE8AAF00D18C9C /* Door Filled-50.png */,
 				124122B61DBE598700D18C9C /* Key Filled-75.png */,
 				124122B71DBE598700D18C9C /* Key Filled-50.png */,
 				124122B81DBE598700D18C9C /* Key Filled-30.png */,
@@ -190,7 +200,7 @@
 				1241228D1DBD662100D18C9C /* Password Filled-100.png */,
 				1241228B1DBD661C00D18C9C /* Cloud-96.png */,
 			);
-			name = Images;
+			name = images;
 			sourceTree = "<group>";
 		};
 		1241229B1DBD67B100D18C9C /* controllers */ = {
@@ -200,8 +210,18 @@
 				1241229C1DBD67D200D18C9C /* LoginViewController.swift */,
 				1241229E1DBD682300D18C9C /* RegistrationViewController.swift */,
 				124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */,
+				1210023C1DC7F3720079C7AA /* AddLockViewController.swift */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		12625A4A1DC7CE2B0021528A /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				12625A4B1DC7CE430021528A /* Lock.swift */,
+				12625A4D1DC7D2270021528A /* VirtualKey.swift */,
+			);
+			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +337,7 @@
 				124122671DBD648A00D18C9C /* LaunchScreen.storyboard in Resources */,
 				124122BE1DBE598700D18C9C /* Key Filled-30.png in Resources */,
 				124122BF1DBE598700D18C9C /* Key_75.png in Resources */,
+				124122C31DBE8AAF00D18C9C /* Door Filled-50.png in Resources */,
 				124122961DBD663E00D18C9C /* Unlock Filled-100.png in Resources */,
 				124122B51DBDA84A00D18C9C /* Home Automation Filled-30.png in Resources */,
 				124122C11DBE598700D18C9C /* Key-50.png in Resources */,
@@ -361,7 +382,10 @@
 				1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */,
 				1241229F1DBD682300D18C9C /* RegistrationViewController.swift in Sources */,
 				1241225D1DBD648A00D18C9C /* AppDelegate.swift in Sources */,
+				12625A4C1DC7CE430021528A /* Lock.swift in Sources */,
 				124122A51DBD7CD400D18C9C /* userInterfaceViewController.swift in Sources */,
+				12625A4E1DC7D2270021528A /* VirtualKey.swift in Sources */,
+				1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +632,7 @@
 				124122831DBD648A00D18C9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		124122841DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockTests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +641,7 @@
 				124122861DBD648A00D18C9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		124122871DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockUITests" */ = {
 			isa = XCConfigurationList;
@@ -624,6 +650,7 @@
 				124122891DBD648A00D18C9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

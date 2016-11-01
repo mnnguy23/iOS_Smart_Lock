@@ -11,12 +11,18 @@ import UIKit
 class userInterfaceViewController: UIViewController {
 
     let LogInKey = "isUserLoggedIn"
+    let lockKey = "lockValue"
+    let lockImages: [UIImage] = [#imageLiteral(resourceName: "Lock Filled-100.png"), #imageLiteral(resourceName: "Unlock Filled-100.png")]
+    var lockEnabledStored = false
+    var enabledLocks:[String:Lock]?
     
     @IBOutlet weak var lockImage: UIImageView!
+    @IBOutlet weak var lockButton: UIButton!
+    @IBOutlet weak var addLockButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        checkForLocks()
         // Do any additional setup after loading the view.
     }
 
@@ -25,17 +31,11 @@ class userInterfaceViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        lockEnabledStored = UserDefaults.standard.bool(forKey: lockKey)
+        checkLockValue(lockValue: lockEnabledStored)
     }
-    */
-    
     
     @IBAction func logOut(_ sender: AnyObject) {
         
@@ -44,8 +44,22 @@ class userInterfaceViewController: UIViewController {
         
         confirmationMessage(message: "Successfully logged out.")
     }
+    
+    @IBAction func lockAccess(_ sender: AnyObject) {
+        lockEnabledStored = UserDefaults.standard.bool(forKey: lockKey)
+        if(lockEnabledStored) {
+            UserDefaults.standard.set(false, forKey: lockKey)
+            UserDefaults.standard.synchronize()
+        } else {
+            UserDefaults.standard.set(true, forKey: lockKey)
+            UserDefaults.standard.synchronize()
+        }
+        lockEnabledStored = UserDefaults.standard.bool(forKey: lockKey)
+        checkLockValue(lockValue: lockEnabledStored)
+    }
+    
 
-    func confirmationMessage(message: String) {
+    private func confirmationMessage(message: String) {
         let myAlert = UIAlertController(title: "Confirmed", message: message, preferredStyle: UIAlertControllerStyle.alert)
         
         let okAction = UIAlertAction(title: "Ok" , style: UIAlertActionStyle.default) { action in
@@ -55,5 +69,27 @@ class userInterfaceViewController: UIViewController {
         myAlert.addAction(okAction)
         
         present(myAlert, animated: true, completion: nil)
+    }
+    
+    private func checkLockValue(lockValue: Bool) {
+        if(lockValue) {
+            lockButton.backgroundColor = UIColor.red
+            lockButton.setTitle("Unlock", for: .normal)
+            lockImage.image = lockImages[0]
+        } else {
+            lockButton.backgroundColor = UIColor.green
+            lockButton.setTitle("Lock", for: .normal)
+            lockImage.image = lockImages[1]
+        }
+    }
+    
+    private func checkForLocks() {
+        if enabledLocks != nil {
+            lockButton.isHidden = false
+            lockImage.isHidden = false
+        } else {
+            lockButton.isHidden = true
+            lockImage.isHidden = true
+        }
     }
 }

@@ -14,7 +14,7 @@ class userInterfaceViewController: UIViewController {
     let lockKey = "lockValue"
     let lockImages: [UIImage] = [#imageLiteral(resourceName: "Lock Filled-100.png"), #imageLiteral(resourceName: "Unlock Filled-100.png")]
     var lockEnabledStored = false
-    var enabledLocks:[String:Lock]?
+    var locks:[Lock] = []
     
     @IBOutlet weak var lockImage: UIImageView!
     @IBOutlet weak var lockButton: UIButton!
@@ -84,12 +84,22 @@ class userInterfaceViewController: UIViewController {
     }
     
     private func checkForLocks() {
-        if enabledLocks != nil {
+        if locks.count != 0 {
             lockButton.isHidden = false
             lockImage.isHidden = false
         } else {
             lockButton.isHidden = true
             lockImage.isHidden = true
         }
+    }
+    
+    @IBAction func saveLock(unwindSegue: UIStoryboardSegue) {
+        if let lockDetailsViewController = unwindSegue.source as? AddLockViewController {
+            if let lock = lockDetailsViewController.lock {
+                locks.append(lock)
+            }
+        }
+        
+        checkForLocks()
     }
 }

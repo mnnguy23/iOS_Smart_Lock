@@ -8,8 +8,13 @@
 
 import UIKit
 
-class AddLockViewController: UIViewController {
+class AddLockViewController: UIViewController{
+    
+    var lock:Lock?
 
+    @IBOutlet weak var serialNumberTextField: UITextField!
+    @IBOutlet weak var repeatSerialNumberTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,8 +40,40 @@ class AddLockViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func saveLock(unwindSegue: UIStoryboardSegue) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "saveLockDetail"{
+                lock = Lock(lockId: serialNumberTextField.text!)
+            }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        var result = false
+        if( identifier == "saveLockDetail") {
+            if !(serialNumberTextField.text?.isEmpty)! {
+                if !(repeatSerialNumberTextField.text?.isEmpty)! {
+                    if serialNumberTextField.text! == repeatSerialNumberTextField.text! {
+                        createAlert(title: "Success", message: "Device successfully added!")
+                        result = true
+                    } else {
+                        createAlert(title: "Error", message: "Values do not match.")
+                    }
+                } else {
+                    createAlert(title: "Error", message: "Value missing in second field.")
+                }
+            } else {
+                createAlert(title: "Error", message: "Value missing in first field.")
+            }
         }
+        print(">>> \(serialNumberTextField.text!)")
+        return result
+    }
+    
+    
+    func createAlert(title: String, message: String) {
+        let alertVC = UIAlertController(title: title, message: message , preferredStyle: UIAlertControllerStyle.alert)
+        let alertAct = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertVC.addAction(alertAct)
+        present(alertVC, animated: true, completion: nil)
+    }
 
 }

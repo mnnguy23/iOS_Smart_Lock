@@ -14,6 +14,7 @@ class AddLockViewController: UIViewController{
 
     @IBOutlet weak var serialNumberTextField: UITextField!
     @IBOutlet weak var repeatSerialNumberTextField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,26 +43,30 @@ class AddLockViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "saveLockDetail"{
-                lock = Lock(lockId: serialNumberTextField.text!)
+                lock = Lock(lockId: serialNumberTextField.text!, name: nameField.text!)
             }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         var result = false
         if( identifier == "saveLockDetail") {
-            if !(serialNumberTextField.text?.isEmpty)! {
-                if !(repeatSerialNumberTextField.text?.isEmpty)! {
-                    if serialNumberTextField.text! == repeatSerialNumberTextField.text! {
-                        createAlert(title: "Success", message: "Device successfully added!")
-                        result = true
+            if !(nameField.text?.isEmpty)! {
+                if !(serialNumberTextField.text?.isEmpty)! {
+                    if !(repeatSerialNumberTextField.text?.isEmpty)! {
+                        if serialNumberTextField.text! == repeatSerialNumberTextField.text! {
+                            createAlert(title: "Success", message: "Device successfully added!")
+                            result = true
+                        } else {
+                            createAlert(title: "Error", message: "Values do not match.")
+                        }
                     } else {
-                        createAlert(title: "Error", message: "Values do not match.")
+                        createAlert(title: "Error", message: "Value missing in second field.")
                     }
                 } else {
-                    createAlert(title: "Error", message: "Value missing in second field.")
+                    createAlert(title: "Error", message: "Value missing in first field.")
                 }
             } else {
-                createAlert(title: "Error", message: "Value missing in first field.")
+                createAlert(title: "Error", message: "Name is missing.")
             }
         }
         print(">>> \(serialNumberTextField.text!)")

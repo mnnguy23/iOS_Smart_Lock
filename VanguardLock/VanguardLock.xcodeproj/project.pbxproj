@@ -39,6 +39,8 @@
 		124122C31DBE8AAF00D18C9C /* Door Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122C21DBE8AAF00D18C9C /* Door Filled-50.png */; };
 		12625A4C1DC7CE430021528A /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4B1DC7CE430021528A /* Lock.swift */; };
 		12625A4E1DC7D2270021528A /* VirtualKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4D1DC7D2270021528A /* VirtualKey.swift */; };
+		2C27EBB31DCA3F5900F9477B /* AddKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27EBB21DCA3F5900F9477B /* AddKeyViewController.swift */; };
+		2C27EBB51DCA3F8400F9477B /* LocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27EBB41DCA3F8400F9477B /* LocksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		124122C21DBE8AAF00D18C9C /* Door Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Door Filled-50.png"; sourceTree = "<group>"; };
 		12625A4B1DC7CE430021528A /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 		12625A4D1DC7D2270021528A /* VirtualKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualKey.swift; sourceTree = "<group>"; };
+		2C27EBB21DCA3F5900F9477B /* AddKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddKeyViewController.swift; sourceTree = "<group>"; };
+		2C27EBB41DCA3F8400F9477B /* LocksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,8 @@
 				1241229E1DBD682300D18C9C /* RegistrationViewController.swift */,
 				124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */,
 				1210023C1DC7F3720079C7AA /* AddLockViewController.swift */,
+				2C27EBB21DCA3F5900F9477B /* AddKeyViewController.swift */,
+				2C27EBB41DCA3F8400F9477B /* LocksTableViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -382,9 +388,11 @@
 				1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */,
 				1241229F1DBD682300D18C9C /* RegistrationViewController.swift in Sources */,
 				1241225D1DBD648A00D18C9C /* AppDelegate.swift in Sources */,
+				2C27EBB51DCA3F8400F9477B /* LocksTableViewController.swift in Sources */,
 				12625A4C1DC7CE430021528A /* Lock.swift in Sources */,
 				124122A51DBD7CD400D18C9C /* userInterfaceViewController.swift in Sources */,
 				12625A4E1DC7D2270021528A /* VirtualKey.swift in Sources */,
+				2C27EBB31DCA3F5900F9477B /* AddKeyViewController.swift in Sources */,
 				1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,9 @@ class userInterfaceViewController: UIViewController {
     var lockEnabledStored = false
     var locks:[Lock] = []
     
-    @IBOutlet weak var lockImage: UIImageView!
     @IBOutlet weak var lockButton: UIButton!
     @IBOutlet weak var addLockButton: UIButton!
+    @IBOutlet weak var lockLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class userInterfaceViewController: UIViewController {
         checkLockValue(lockValue: lockEnabledStored)
     }
     
-    @IBAction func logOut(_ sender: AnyObject) {
+    @IBAction func logOut(_ sender: Any) {
         
         UserDefaults.standard.set(false, forKey: LogInKey)
         UserDefaults.standard.synchronize()
@@ -73,24 +73,27 @@ class userInterfaceViewController: UIViewController {
     
     private func checkLockValue(lockValue: Bool) {
         if(lockValue) {
-            lockButton.backgroundColor = UIColor.red
-            lockButton.setTitle("Unlock", for: .normal)
-            lockImage.image = lockImages[0]
+            lockButton.backgroundColor = UIColor.white.withAlphaComponent(1.0)
+            lockButton.tintColor = UIColor.green
+            lockButton.setImage(lockImages[0], for: .normal)
         } else {
-            lockButton.backgroundColor = UIColor.green
-            lockButton.setTitle("Lock", for: .normal)
-            lockImage.image = lockImages[1]
+            lockButton.setImage(lockImages[1], for: .normal)
+            lockButton.tintColor = UIColor.red
+            lockButton.backgroundColor = UIColor.white.withAlphaComponent(1.0)
         }
     }
     
     private func checkForLocks() {
         if locks.count != 0 {
             lockButton.isHidden = false
-            lockImage.isHidden = false
+            lockLabel.isHidden = false
         } else {
             lockButton.isHidden = true
-            lockImage.isHidden = true
+            lockLabel.isHidden = true
         }
+    }
+    
+    @IBAction func cancel(unwindSegue: UIStoryboardSegue) {
     }
     
     @IBAction func saveLock(unwindSegue: UIStoryboardSegue) {
@@ -99,7 +102,6 @@ class userInterfaceViewController: UIViewController {
                 locks.append(lock)
             }
         }
-        
         checkForLocks()
     }
 }

@@ -10,10 +10,12 @@ import Foundation
 
 class Lock {
     var locked: Bool = false
+    var name: String
     var lockId: String
     var virtualKeys : [VirtualKey]?
     
-    init(lockId: String) {
+    init(lockId: String, name: String) {
         self.lockId = lockId
+        self.name = name
     }
 }

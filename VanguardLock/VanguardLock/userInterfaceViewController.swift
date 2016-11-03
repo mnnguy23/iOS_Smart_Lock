@@ -90,6 +90,7 @@ class userInterfaceViewController: UIViewController {
     
     private func checkForLocks() {
         if locks.count != 0 {
+            lockLabel.text = locks[0].name
             lockButton.isHidden = false
             lockLabel.isHidden = false
             addKeyButton.isHidden = false
@@ -103,6 +104,15 @@ class userInterfaceViewController: UIViewController {
     }
     
     private func checkForKey() {
+        for lock in locks {
+            if lock.virtualKeys.count > 0 {
+                lockButton.isEnabled = true
+                lockLabel.isEnabled = true
+            } else {
+                lockButton.isEnabled = false
+                lockLabel.isEnabled = false
+            }
+        }
     }
     
     
@@ -114,6 +124,7 @@ class userInterfaceViewController: UIViewController {
             }
         }
         checkForLocks()
+        checkForKey()
     }
     
     @IBAction func saveKey(unwindSegue: UIStoryboardSegue) {
@@ -122,6 +133,8 @@ class userInterfaceViewController: UIViewController {
                 locks = editedLocks
             }
         }
+        print("> \(locks[0].virtualKeys)")
+        checkForKey()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

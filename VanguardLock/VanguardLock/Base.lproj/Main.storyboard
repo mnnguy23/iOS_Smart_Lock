@@ -329,7 +329,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SeI-5M-iiO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AxW-2i-oPR">
                                 <rect key="frame" x="16" y="318" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -338,24 +338,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SeI-5M-iiO" firstAttribute="top" secondItem="BhK-Oh-zz1" secondAttribute="bottom" constant="17" id="1hS-WQ-93O"/>
                             <constraint firstItem="BhK-Oh-zz1" firstAttribute="centerX" secondItem="qhL-RJ-wiB" secondAttribute="centerX" id="1yE-zx-1EM"/>
                             <constraint firstItem="xjc-5F-ZmE" firstAttribute="top" secondItem="sCX-q9-MWd" secondAttribute="bottom" constant="8" id="20d-VP-7jp"/>
                             <constraint firstItem="GoF-3Y-BB6" firstAttribute="leading" secondItem="qhL-RJ-wiB" secondAttribute="leading" id="4QF-p3-aks"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SeI-5M-iiO" secondAttribute="trailing" id="4i5-vL-Gcz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AxW-2i-oPR" secondAttribute="trailing" id="8Zt-Zr-AQB"/>
+                            <constraint firstItem="AxW-2i-oPR" firstAttribute="top" secondItem="BhK-Oh-zz1" secondAttribute="bottom" constant="17" id="AcG-9o-9Nq"/>
                             <constraint firstItem="xjc-5F-ZmE" firstAttribute="leading" secondItem="qhL-RJ-wiB" secondAttribute="leading" id="OPN-PP-FgZ"/>
-                            <constraint firstItem="SeI-5M-iiO" firstAttribute="centerX" secondItem="qhL-RJ-wiB" secondAttribute="centerX" id="TyJ-17-cp6"/>
+                            <constraint firstItem="AxW-2i-oPR" firstAttribute="leading" secondItem="qhL-RJ-wiB" secondAttribute="leadingMargin" id="Wbb-cM-9zV"/>
                             <constraint firstAttribute="trailing" secondItem="xjc-5F-ZmE" secondAttribute="trailing" id="Wx1-Xz-yLg"/>
                             <constraint firstItem="GoF-3Y-BB6" firstAttribute="top" secondItem="qhL-RJ-wiB" secondAttribute="top" id="bsT-dM-1pT"/>
                             <constraint firstAttribute="trailing" secondItem="GoF-3Y-BB6" secondAttribute="trailing" id="g2u-oK-ztZ"/>
                             <constraint firstItem="sCX-q9-MWd" firstAttribute="top" secondItem="GoF-3Y-BB6" secondAttribute="bottom" constant="54" id="lK7-08-Glz"/>
-                            <constraint firstItem="SeI-5M-iiO" firstAttribute="leading" secondItem="qhL-RJ-wiB" secondAttribute="leadingMargin" id="mEu-Y2-w5D"/>
+                            <constraint firstItem="AxW-2i-oPR" firstAttribute="centerX" secondItem="qhL-RJ-wiB" secondAttribute="centerX" id="ndu-ih-abg"/>
                             <constraint firstItem="BhK-Oh-zz1" firstAttribute="top" secondItem="xjc-5F-ZmE" secondAttribute="bottom" constant="42" id="oAK-bY-Bo2"/>
                             <constraint firstItem="sCX-q9-MWd" firstAttribute="centerX" secondItem="qhL-RJ-wiB" secondAttribute="centerX" id="tBM-Ps-6Dn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="keyTextField" destination="SeI-5M-iiO" id="48V-nK-VAh"/>
+                        <outlet property="keyNameTF" destination="AxW-2i-oPR" id="UgC-QP-75F"/>
                         <outlet property="lockLabel" destination="sCX-q9-MWd" id="9DP-wq-Qns"/>
                         <outlet property="lockPickerView" destination="xjc-5F-ZmE" id="JMq-IE-YWp"/>
                     </connections>

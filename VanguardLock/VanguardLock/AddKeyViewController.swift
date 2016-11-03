@@ -11,11 +11,10 @@ import UIKit
 class AddKeyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var locks:[Lock]?
-    var key:VirtualKey?
 
     @IBOutlet weak var lockPickerView: UIPickerView!
     @IBOutlet weak var lockLabel: UILabel!
-    @IBOutlet weak var keyTextField: UITextField!
+    @IBOutlet weak var keyNameTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,40 +41,42 @@ class AddKeyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "saveKeyUnwind"{
+            self.addKey()
+        }
+    }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         var result = false
         if(identifier == "saveKeyUnwind") {
-        if !(keyTextField.text?.isEmpty)! {
-        result = createAlert(title: "Are you sure?", message: "Do you want to create a key for this lock: \(lockLabel.text!)")
+            if !(keyNameTF.text?.isEmpty)! {
+                createAlert(title: "Key Created", message: "Created key for lock: \(self.lockLabel.text!)")
+                result = true
+            } else {
+                createAlert(title: "Missing Field", message: "Key name is required.")
             }
         }
         return result
     }
     
-    func createAlert(title: String, message: String) -> Bool {
-        var result = false
+    func createAlert(title: String, message: String){
         let alertVC = UIAlertController(title: title, message: message , preferredStyle: UIAlertControllerStyle.alert)
-        let alertYes = UIAlertAction(title: "Yes", style: .default) { action -> Void in
-            self.addKey()
-            result = true
-        }
-        let alertNo = UIAlertAction(title: "No", style: .cancel) { action -> Void in
-            result = false
-        }
-        alertVC.addAction(alertYes)
-        alertVC.addAction(alertNo)
+        let alertOk = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertVC.addAction(alertOk)
         present(alertVC, animated: true, completion: nil)
-        return result
     }
     
     func addKey() {
         for lock in self.locks! {
             if lock.name == self.lockLabel.text {
                 let token = self.randomStringWithLength()
-                let key = VirtualKey(Id: self.keyTextField.text!, token: token)
-                lock.virtualKeys?.append(key)
+                let key = VirtualKey(Id: self.keyNameTF.text!, token: token)
+                print(">> \(key.token)")
+                lock.virtualKeys.append(key)
             }
         }
+       
     }
     
     func randomStringWithLength() -> String {

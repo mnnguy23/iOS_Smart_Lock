@@ -15,10 +15,15 @@ class userInterfaceViewController: UIViewController {
     let lockImages: [UIImage] = [#imageLiteral(resourceName: "Lock Filled-100.png"), #imageLiteral(resourceName: "Unlock Filled-100.png")]
     var lockEnabledStored = false
     var locks:[Lock] = []
+    var keys:[VirtualKey] = []
     
     @IBOutlet weak var lockButton: UIButton!
     @IBOutlet weak var addLockButton: UIButton!
     @IBOutlet weak var lockLabel: UILabel!
+    @IBOutlet weak var addKeyButton: UIButton!
+    @IBOutlet weak var addKeyLabel: UILabel!
+    
+    // ToDo: Must add UserDefault for The Locks to save.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,14 +92,20 @@ class userInterfaceViewController: UIViewController {
         if locks.count != 0 {
             lockButton.isHidden = false
             lockLabel.isHidden = false
+            addKeyButton.isHidden = false
+            addKeyLabel.isHidden = false
         } else {
             lockButton.isHidden = true
             lockLabel.isHidden = true
+            addKeyButton.isHidden = true
+            addKeyLabel.isHidden = true
         }
     }
     
-    @IBAction func cancel(unwindSegue: UIStoryboardSegue) {
+    private func checkForKey() {
     }
+    
+    
     
     @IBAction func saveLock(unwindSegue: UIStoryboardSegue) {
         if let lockDetailsViewController = unwindSegue.source as? AddLockViewController {
@@ -103,5 +114,21 @@ class userInterfaceViewController: UIViewController {
             }
         }
         checkForLocks()
+    }
+    
+    @IBAction func saveKey(unwindSegue: UIStoryboardSegue) {
+        if let returnVC = unwindSegue.source as? AddKeyViewController {
+            if let editedLocks = returnVC.locks {
+                locks = editedLocks
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "addKeySegue") {
+            if let destinationVC = segue.destination as? AddKeyViewController {
+               destinationVC.locks = self.locks
+            }
+        }
     }
 }

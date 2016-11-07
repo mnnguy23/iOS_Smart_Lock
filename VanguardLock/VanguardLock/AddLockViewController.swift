@@ -43,7 +43,7 @@ class AddLockViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "saveLockDetail"{
-                lock = Lock(lockId: serialNumberTextField.text!, name: nameField.text!)
+                lock = Lock(lockId: serialNumberTextField.text!, name: nameField.text!, location: "")
             }
     }
     

@@ -41,7 +41,7 @@
 		1243C8691DCB002000773481 /* Lock 2 Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 1243C8671DCB002000773481 /* Lock 2 Filled-30.png */; };
 		12625A4C1DC7CE430021528A /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4B1DC7CE430021528A /* Lock.swift */; };
 		12625A4E1DC7D2270021528A /* VirtualKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4D1DC7D2270021528A /* VirtualKey.swift */; };
-		2C27EBB31DCA3F5900F9477B /* AddKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27EBB21DCA3F5900F9477B /* AddKeyViewController.swift */; };
+		128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */; };
 		2C27EBB51DCA3F8400F9477B /* LocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27EBB41DCA3F8400F9477B /* LocksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +103,7 @@
 		1243C8671DCB002000773481 /* Lock 2 Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lock 2 Filled-30.png"; sourceTree = "<group>"; };
 		12625A4B1DC7CE430021528A /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 		12625A4D1DC7D2270021528A /* VirtualKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualKey.swift; sourceTree = "<group>"; };
-		2C27EBB21DCA3F5900F9477B /* AddKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddKeyViewController.swift; sourceTree = "<group>"; };
+		128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockTableViewCell.swift; sourceTree = "<group>"; };
 		2C27EBB41DCA3F8400F9477B /* LocksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,8 +221,8 @@
 				1241229E1DBD682300D18C9C /* RegistrationViewController.swift */,
 				124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */,
 				1210023C1DC7F3720079C7AA /* AddLockViewController.swift */,
-				2C27EBB21DCA3F5900F9477B /* AddKeyViewController.swift */,
 				2C27EBB41DCA3F8400F9477B /* LocksTableViewController.swift */,
+				128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -400,7 +400,7 @@
 				12625A4C1DC7CE430021528A /* Lock.swift in Sources */,
 				124122A51DBD7CD400D18C9C /* userInterfaceViewController.swift in Sources */,
 				12625A4E1DC7D2270021528A /* VirtualKey.swift in Sources */,
-				2C27EBB31DCA3F5900F9477B /* AddKeyViewController.swift in Sources */,
+				128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */,
 				1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

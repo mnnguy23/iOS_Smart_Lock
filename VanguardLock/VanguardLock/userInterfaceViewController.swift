@@ -8,26 +8,31 @@
 
 import UIKit
 
-class userInterfaceViewController: UIViewController {
+class userInterfaceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let LogInKey = "isUserLoggedIn"
     let lockKey = "lockValue"
     let lockImages: [UIImage] = [#imageLiteral(resourceName: "Lock Filled-100.png"), #imageLiteral(resourceName: "Unlock Filled-100.png")]
     var lockEnabledStored = false
-    var locks:[Lock] = []
+    
+    var locks:[Lock] = [Lock(lockId: "1234", name: "Home", location: "3519 Harbor Pass lane, Friendswood, TX 77546")]
     var keys:[VirtualKey] = []
     
-    @IBOutlet weak var lockButton: UIButton!
+ 
     @IBOutlet weak var addLockButton: UIButton!
-    @IBOutlet weak var lockLabel: UILabel!
-    @IBOutlet weak var addKeyButton: UIButton!
-    @IBOutlet weak var addKeyLabel: UILabel!
+    @IBOutlet weak var addLockLabel: UILabel!
+    @IBOutlet weak var locksTableView: UITableView!
+
     
     // ToDo: Must add UserDefault for The Locks to save.
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkForLocks()
+        self.locksTableView.delegate = self
+        self.locksTableView.dataSource = self
+        self.locksTableView.register(LockTableViewCell.self, forCellReuseIdentifier: "cell")
+        print(">>> \(self.locks.count)")
+        // checkForLocks()
         // Do any additional setup after loading the view.
     }
 
@@ -39,7 +44,7 @@ class userInterfaceViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         lockEnabledStored = UserDefaults.standard.bool(forKey: lockKey)
-        checkLockValue(lockValue: lockEnabledStored)
+      //  checkLockValue(lockValue: lockEnabledStored)
     }
     
     @IBAction func logOut(_ sender: Any) {
@@ -60,7 +65,6 @@ class userInterfaceViewController: UIViewController {
             UserDefaults.standard.synchronize()
         }
         lockEnabledStored = UserDefaults.standard.bool(forKey: lockKey)
-        checkLockValue(lockValue: lockEnabledStored)
     }
     
 
@@ -76,6 +80,7 @@ class userInterfaceViewController: UIViewController {
         present(myAlert, animated: true, completion: nil)
     }
     
+   /*
     private func checkLockValue(lockValue: Bool) {
         if(lockValue) {
             lockButton.backgroundColor = UIColor.white.withAlphaComponent(1.0)
@@ -88,6 +93,7 @@ class userInterfaceViewController: UIViewController {
         }
     }
     
+     
     private func checkForLocks() {
         if locks.count != 0 {
             lockLabel.text = locks[0].name
@@ -114,8 +120,7 @@ class userInterfaceViewController: UIViewController {
             }
         }
     }
-    
-    
+    */
     
     @IBAction func saveLock(unwindSegue: UIStoryboardSegue) {
         if let lockDetailsViewController = unwindSegue.source as? AddLockViewController {
@@ -123,25 +128,26 @@ class userInterfaceViewController: UIViewController {
                 locks.append(lock)
             }
         }
-        checkForLocks()
-        checkForKey()
+        //checkForLocks()
+    }
+
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.locks.count
     }
     
-    @IBAction func saveKey(unwindSegue: UIStoryboardSegue) {
-        if let returnVC = unwindSegue.source as? AddKeyViewController {
-            if let editedLocks = returnVC.locks {
-                locks = editedLocks
-            }
-        }
-        print("> \(locks[0].virtualKeys)")
-        checkForKey()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell:LockTableViewCell = self.locksTableView.dequeueReusableCell(withIdentifier: "cell")! as! LockTableViewCell
+        
+        cell.lockLabel?.text = self.locks[indexPath.row].name
+        cell.lockButton?.setImage(lockImages[0], for: .normal)
+        
+        return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "addKeySegue") {
-            if let destinationVC = segue.destination as? AddKeyViewController {
-               destinationVC.locks = self.locks
-            }
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
+    
 }

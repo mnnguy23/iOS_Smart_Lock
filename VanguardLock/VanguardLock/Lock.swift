@@ -12,10 +12,11 @@ class Lock {
     var locked: Bool = false
     var name: String
     var lockId: String
-    var virtualKeys : [VirtualKey] = []
+    var location: String
     
-    init(lockId: String, name: String) {
+    init(lockId: String, name: String, location: String) {
         self.lockId = lockId
         self.name = name
+        self.location = location
     }
 }

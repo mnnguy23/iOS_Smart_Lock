@@ -211,11 +211,11 @@
                                 <rect key="frame" x="0.0" y="141" width="375" height="477"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="l2J-Ny-J4h" customClass="LockTableViewCell" customModule="VanguardLock" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="l2J-Ny-J4h" customClass="LockTableViewCell" customModule="VanguardLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l2J-Ny-J4h" id="sZT-g3-V4x">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5v-vv-g3K">
@@ -224,13 +224,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjK-YX-hEB">
-                                                    <rect key="frame" x="164" y="7" width="46" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjK-YX-hEB">
+                                                    <rect key="frame" x="172" y="7" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="Tf8-mk-Rki"/>
+                                                        <constraint firstAttribute="height" constant="30" id="XeJ-4q-t5g"/>
+                                                    </constraints>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIv-ED-QH7">
-                                                    <rect key="frame" x="312" y="8" width="55" height="30"/>
+                                                    <rect key="frame" x="312" y="8" width="55" height="27.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Manage">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -238,6 +240,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="fjK-YX-hEB" firstAttribute="centerX" secondItem="sZT-g3-V4x" secondAttribute="centerX" id="2c3-yA-vSm"/>
+                                                <constraint firstItem="J5v-vv-g3K" firstAttribute="centerY" secondItem="sZT-g3-V4x" secondAttribute="centerY" id="49Q-dV-nV3"/>
+                                                <constraint firstItem="aIv-ED-QH7" firstAttribute="centerY" secondItem="sZT-g3-V4x" secondAttribute="centerY" id="MLd-UD-koj"/>
+                                                <constraint firstItem="fjK-YX-hEB" firstAttribute="centerY" secondItem="sZT-g3-V4x" secondAttribute="centerY" id="Nrp-jV-JcQ"/>
                                                 <constraint firstItem="J5v-vv-g3K" firstAttribute="leading" secondItem="sZT-g3-V4x" secondAttribute="leadingMargin" id="XeQ-dO-hUb"/>
                                                 <constraint firstItem="J5v-vv-g3K" firstAttribute="top" secondItem="sZT-g3-V4x" secondAttribute="topMargin" constant="3.5" id="xau-5G-XIA"/>
                                                 <constraint firstItem="aIv-ED-QH7" firstAttribute="top" secondItem="sZT-g3-V4x" secondAttribute="top" constant="8" id="yY7-0P-JJo"/>
@@ -538,7 +544,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xdh-Sl-wo3" id="gBp-Br-yQ3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

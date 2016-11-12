@@ -30,7 +30,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         self.locksTableView.delegate = self
         self.locksTableView.dataSource = self
-        self.locksTableView.register(LockTableViewCell.self, forCellReuseIdentifier: "cell")
+        self.locksTableView.allowsSelection = false
         print(">>> \(self.locks.count)")
         // checkForLocks()
         // Do any additional setup after loading the view.
@@ -131,7 +131,9 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         //checkForLocks()
     }
 
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.locks.count

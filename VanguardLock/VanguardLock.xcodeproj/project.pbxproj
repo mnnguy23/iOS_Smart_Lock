@@ -556,7 +556,7 @@
 				DEVELOPMENT_TEAM = UH8XQ58787;
 				INFOPLIST_FILE = VanguardLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLock;
+				PRODUCT_BUNDLE_IDENTIFIER = computing.VanguardLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -569,7 +569,7 @@
 				DEVELOPMENT_TEAM = UH8XQ58787;
 				INFOPLIST_FILE = VanguardLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLock;
+				PRODUCT_BUNDLE_IDENTIFIER = computing.VanguardLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

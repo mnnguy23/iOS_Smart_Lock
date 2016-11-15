@@ -97,37 +97,49 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZu-YN-jBg">
-                                <rect key="frame" x="16" y="125" width="45" height="21"/>
+                                <rect key="frame" x="16" y="61" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uak-Ha-zIH">
-                                <rect key="frame" x="16" y="154" width="343" height="30"/>
+                                <rect key="frame" x="16" y="90" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDS-mp-K5o">
-                                <rect key="frame" x="16" y="195" width="109" height="20.5"/>
+                                <rect key="frame" x="16" y="131" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoZ-BT-s6S">
-                                <rect key="frame" x="16" y="261" width="109" height="20.5"/>
+                                <rect key="frame" x="16" y="198" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Lock's serial number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6U-sl-nHc">
-                                <rect key="frame" x="16" y="223" width="343" height="30"/>
+                                <rect key="frame" x="16" y="160" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Lock's serial number again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abl-Ly-akT">
-                                <rect key="frame" x="16" y="290" width="343" height="30"/>
+                                <rect key="frame" x="16" y="227" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physical Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yy-WC-Rwl">
+                                <rect key="frame" x="16" y="265" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a physical address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hp5-vw-aFu">
+                                <rect key="frame" x="16" y="294" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -136,27 +148,33 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="g6U-sl-nHc" firstAttribute="top" secondItem="iDS-mp-K5o" secondAttribute="bottom" constant="8" id="7TO-Mk-Nk6"/>
-                            <constraint firstItem="CZu-YN-jBg" firstAttribute="top" secondItem="2Pi-TM-bqt" secondAttribute="bottom" constant="70" id="AhG-x2-wbM"/>
+                            <constraint firstItem="9Yy-WC-Rwl" firstAttribute="top" secondItem="Abl-Ly-akT" secondAttribute="bottom" constant="8" id="8Qm-0d-GiG"/>
+                            <constraint firstItem="CZu-YN-jBg" firstAttribute="top" secondItem="2Pi-TM-bqt" secondAttribute="bottom" constant="6" id="AhG-x2-wbM"/>
                             <constraint firstItem="iDS-mp-K5o" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="DJl-P4-vW6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uak-Ha-zIH" secondAttribute="trailing" id="DN8-ZQ-njq"/>
                             <constraint firstItem="CZu-YN-jBg" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="HrZ-x6-yCK"/>
                             <constraint firstItem="Abl-Ly-akT" firstAttribute="top" secondItem="FoZ-BT-s6S" secondAttribute="bottom" constant="8" id="J8Z-TO-l7o"/>
-                            <constraint firstItem="iDS-mp-K5o" firstAttribute="top" secondItem="2Pi-TM-bqt" secondAttribute="bottom" constant="140" id="LFc-k4-1B6"/>
+                            <constraint firstItem="iDS-mp-K5o" firstAttribute="top" secondItem="2Pi-TM-bqt" secondAttribute="bottom" constant="76" id="LFc-k4-1B6"/>
                             <constraint firstItem="g6U-sl-nHc" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="Lrk-zF-SwQ"/>
+                            <constraint firstItem="hp5-vw-aFu" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="POG-Zd-1PT"/>
                             <constraint firstItem="Abl-Ly-akT" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="QQT-BO-sLf"/>
                             <constraint firstItem="Abl-Ly-akT" firstAttribute="trailing" secondItem="fOD-DP-6PJ" secondAttribute="trailingMargin" id="UPA-tC-DxT"/>
                             <constraint firstItem="2Pi-TM-bqt" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leading" id="WgB-df-G0R"/>
                             <constraint firstAttribute="trailing" secondItem="2Pi-TM-bqt" secondAttribute="trailing" id="bUs-zU-6RA"/>
                             <constraint firstItem="Uak-Ha-zIH" firstAttribute="top" secondItem="CZu-YN-jBg" secondAttribute="bottom" constant="8" id="brP-Fu-blq"/>
                             <constraint firstItem="Uak-Ha-zIH" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="e4u-Ca-nO1"/>
+                            <constraint firstItem="hp5-vw-aFu" firstAttribute="top" secondItem="9Yy-WC-Rwl" secondAttribute="bottom" constant="8" id="eVw-h9-sgP"/>
                             <constraint firstItem="FoZ-BT-s6S" firstAttribute="top" secondItem="g6U-sl-nHc" secondAttribute="bottom" constant="8" id="gQ7-8u-WJu"/>
                             <constraint firstItem="FoZ-BT-s6S" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="qqM-d3-6V8"/>
                             <constraint firstItem="g6U-sl-nHc" firstAttribute="trailing" secondItem="fOD-DP-6PJ" secondAttribute="trailingMargin" id="rvA-an-ais"/>
+                            <constraint firstItem="9Yy-WC-Rwl" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="tzb-si-7H0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hp5-vw-aFu" secondAttribute="trailing" id="wFr-rD-AvY"/>
                             <constraint firstItem="2Pi-TM-bqt" firstAttribute="top" secondItem="uUB-gp-UXB" secondAttribute="bottom" constant="-20" id="ydK-qM-3ov"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="addressTextField" destination="hp5-vw-aFu" id="VQd-u5-2gH"/>
                         <outlet property="nameField" destination="Uak-Ha-zIH" id="amu-Vv-NtV"/>
                         <outlet property="repeatSerialNumberTextField" destination="Abl-Ly-akT" id="z4n-l8-Lqo"/>
                         <outlet property="serialNumberTextField" destination="g6U-sl-nHc" id="iKy-wp-dXi"/>
@@ -165,7 +183,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJ1-9a-OD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lup-dB-hHH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1902.8985507246377" y="-1983.4239130434785"/>
+            <point key="canvasLocation" x="1901.5999999999999" y="-1983.9580209895055"/>
         </scene>
         <!--Home-->
         <scene sceneID="war-an-Sgr">
@@ -211,32 +229,36 @@
                                 <rect key="frame" x="0.0" y="141" width="375" height="477"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="l2J-Ny-J4h" customClass="LockTableViewCell" customModule="VanguardLock" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="l2J-Ny-J4h" customClass="LockTableViewCell" customModule="VanguardLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l2J-Ny-J4h" id="sZT-g3-V4x">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5v-vv-g3K">
-                                                    <rect key="frame" x="8" y="12" width="42" height="21"/>
+                                                    <rect key="frame" x="8" y="12" width="42" height="19"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjK-YX-hEB">
-                                                    <rect key="frame" x="172" y="7" width="30" height="30"/>
+                                                    <rect key="frame" x="173" y="7" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="Tf8-mk-Rki"/>
                                                         <constraint firstAttribute="height" constant="30" id="XeJ-4q-t5g"/>
                                                     </constraints>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIv-ED-QH7">
-                                                    <rect key="frame" x="312" y="8" width="55" height="27.5"/>
+                                                    <rect key="frame" x="312" y="8" width="55" height="28"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Manage">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="Tqm-Gk-nvd" kind="presentation" identifier="managementSegue" id="IBR-TU-CsX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -286,8 +308,42 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Prh-xi-bSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="2Rp-Lp-9Z4"/>
             </objects>
             <point key="canvasLocation" x="2013.5999999999999" y="-1274.2128935532235"/>
+        </scene>
+        <!--Management View Controller-->
+        <scene sceneID="Gwn-Ir-vI4">
+            <objects>
+                <viewController id="Tqm-Gk-nvd" customClass="ManagementViewController" customModule="VanguardLock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wjh-h4-ZQ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ui-t3-DW4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uWO-HD-VgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RbB-3h-QEg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Manage Lock" id="CgI-NZ-Ctu">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="XGs-Cf-bqB">
+                                            <connections>
+                                                <action selector="back:" destination="Tqm-Gk-nvd" id="N0U-Mf-T2Y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qj4-A1-HH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2879" y="-1274"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rC2-WO-ajo">
@@ -459,7 +515,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="OBq-S4-CmI"/>
                                 </constraints>
-                                <state key="normal" title="Log in">
+                                <state key="normal" title="Go Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -531,35 +587,6 @@
             </objects>
             <point key="canvasLocation" x="361" y="139"/>
         </scene>
-        <!--Locks-->
-        <scene sceneID="Jjf-dB-V4n">
-            <objects>
-                <tableViewController id="Nhe-5Z-sI8" customClass="LocksTableViewController" customModule="VanguardLock" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="J58-Ow-2fG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xdh-Sl-wo3">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xdh-Sl-wo3" id="gBp-Br-yQ3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Nhe-5Z-sI8" id="bfu-Wc-WHt"/>
-                            <outlet property="delegate" destination="Nhe-5Z-sI8" id="6lj-Vn-m6i"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Locks" image="Lock 2 Filled-30.png" selectedImage="Lock 2 Filled-30.png" id="txP-7p-9tT"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mKH-Ph-RuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1075" y="-1262"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SGd-yd-tf2">
             <objects>
@@ -572,7 +599,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="gPo-cx-7HQ" kind="relationship" relationship="viewControllers" id="Vvh-xn-vfC"/>
-                        <segue destination="Nhe-5Z-sI8" kind="relationship" relationship="viewControllers" id="Pez-2m-da2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMJ-zN-MTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -587,7 +613,6 @@
         <image name="Door Filled-50.png" width="50" height="50"/>
         <image name="Home Automation Filled" width="25" height="25"/>
         <image name="Home Automation-30.png" width="30" height="30"/>
-        <image name="Lock 2 Filled-30.png" width="30" height="30"/>
         <image name="Message-50.png" width="50" height="50"/>
         <image name="Password Check-50.png" width="50" height="50"/>
         <image name="Password Filled-100.png" width="100" height="100"/>

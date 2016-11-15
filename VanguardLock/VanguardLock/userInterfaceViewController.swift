@@ -15,7 +15,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     let lockImages: [UIImage] = [#imageLiteral(resourceName: "Lock Filled-100.png"), #imageLiteral(resourceName: "Unlock Filled-100.png")]
     var lockEnabledStored = false
     
-    var locks:[Lock] = [Lock(lockId: "1234", name: "Home", location: "3519 Harbor Pass lane, Friendswood, TX 77546")]
+    var locks:[Lock] = [Lock(lockId: "1234", name: "Home", location: "3519 Harbor Pass lane, Friendswood, TX 77546"), Lock(lockId: "5678", name: "Garage", location: "3519 Harbor Pass lane, Friendswood, TX 77546")]
     var keys:[VirtualKey] = []
     
  
@@ -30,9 +30,8 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         self.locksTableView.delegate = self
         self.locksTableView.dataSource = self
-        self.locksTableView.allowsSelection = false
         print(">>> \(self.locks.count)")
-        // checkForLocks()
+
         // Do any additional setup after loading the view.
     }
 
@@ -79,54 +78,14 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         
         present(myAlert, animated: true, completion: nil)
     }
-    
-   /*
-    private func checkLockValue(lockValue: Bool) {
-        if(lockValue) {
-            lockButton.backgroundColor = UIColor.white.withAlphaComponent(1.0)
-            lockButton.tintColor = UIColor.green
-            lockButton.setImage(lockImages[0], for: .normal)
-        } else {
-            lockButton.setImage(lockImages[1], for: .normal)
-            lockButton.tintColor = UIColor.red
-            lockButton.backgroundColor = UIColor.white.withAlphaComponent(1.0)
-        }
-    }
-    
-     
-    private func checkForLocks() {
-        if locks.count != 0 {
-            lockLabel.text = locks[0].name
-            lockButton.isHidden = false
-            lockLabel.isHidden = false
-            addKeyButton.isHidden = false
-            addKeyLabel.isHidden = false
-        } else {
-            lockButton.isHidden = true
-            lockLabel.isHidden = true
-            addKeyButton.isHidden = true
-            addKeyLabel.isHidden = true
-        }
-    }
-    
-    private func checkForKey() {
-        for lock in locks {
-            if lock.virtualKeys.count > 0 {
-                lockButton.isEnabled = true
-                lockLabel.isEnabled = true
-            } else {
-                lockButton.isEnabled = false
-                lockLabel.isEnabled = false
-            }
-        }
-    }
-    */
+
     
     @IBAction func saveLock(unwindSegue: UIStoryboardSegue) {
         if let lockDetailsViewController = unwindSegue.source as? AddLockViewController {
             if let lock = lockDetailsViewController.lock {
                 locks.append(lock)
             }
+            self.locksTableView.reloadData()
         }
         //checkForLocks()
     }
@@ -141,15 +100,46 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:LockTableViewCell = self.locksTableView.dequeueReusableCell(withIdentifier: "cell")! as! LockTableViewCell
-        
-        cell.lockLabel?.text = self.locks[indexPath.row].name
-        cell.lockButton?.setImage(lockImages[0], for: .normal)
-        
+        cell = returnLockCell(lock: self.locks[indexPath.row], cell: cell)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        toggleLock(lock: locks[indexPath.row])
+        self.locksTableView.reloadRows(at: [indexPath], with: .none)
     }
     
+    
+    func returnLockCell(lock: Lock, cell: LockTableViewCell) -> LockTableViewCell {
+        cell.lockLabel?.text = lock.name
+        cell.lock = lock
+        
+        if(cell.lock.locked) {
+            cell.lockButton.setImage(lockImages[0], for: .normal)
+            cell.lockButton.backgroundColor = UIColor.white.withAlphaComponent(1.0)
+            cell.lockButton.tintColor = UIColor.green
+            
+        } else {
+            cell.lockButton.backgroundColor = UIColor.white.withAlphaComponent(1.0)
+            cell.lockButton.setImage(lockImages[1], for: .normal)
+            cell.lockButton.tintColor = UIColor.red
+        }
+        print(cell.lock.locked)
+        return cell
+    }
+    
+    func toggleLock(lock: Lock) {
+        if lock.locked {
+            lock.locked = false
+        } else {
+            lock.locked = true
+        }
+        print(lock.locked)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "managementSegue" {
+            
+        }
+    }
 }

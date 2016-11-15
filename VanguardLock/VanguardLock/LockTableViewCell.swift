@@ -13,6 +13,8 @@ class LockTableViewCell: UITableViewCell {
     @IBOutlet weak var lockLabel: UILabel!
     @IBOutlet weak var lockButton: UIButton!
     @IBOutlet weak var manageButton: UIButton!
+    
+    var lock:Lock!
 
     
     override func awakeFromNib() {
@@ -26,5 +28,4 @@ class LockTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

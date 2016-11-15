@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
 class AddLockViewController: UIViewController{
     
     var lock:Lock?
+    let geoCoder = CLGeocoder()
 
     @IBOutlet weak var serialNumberTextField: UITextField!
     @IBOutlet weak var repeatSerialNumberTextField: UITextField!
     @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +46,7 @@ class AddLockViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "saveLockDetail"{
-                lock = Lock(lockId: serialNumberTextField.text!, name: nameField.text!, location: "")
+                lock = Lock(lockId: serialNumberTextField.text!, name: nameField.text!, location: addressTextField.text!)
             }
     }
     
@@ -53,11 +56,15 @@ class AddLockViewController: UIViewController{
             if !(nameField.text?.isEmpty)! {
                 if !(serialNumberTextField.text?.isEmpty)! {
                     if !(repeatSerialNumberTextField.text?.isEmpty)! {
-                        if serialNumberTextField.text! == repeatSerialNumberTextField.text! {
-                            createAlert(title: "Success", message: "Device successfully added!")
-                            result = true
+                        if !(addressTextField.text?.isEmpty)! {
+                            if serialNumberTextField.text! == repeatSerialNumberTextField.text! {
+                                createAlert(title: "Success", message: "Device successfully added!")
+                                result = true
+                            } else {
+                                createAlert(title: "Error", message: "Values do not match.")
+                            }
                         } else {
-                            createAlert(title: "Error", message: "Values do not match.")
+                            createAlert(title: "No Address", message: "Value missing from address field")
                         }
                     } else {
                         createAlert(title: "Error", message: "Value missing in second field.")
@@ -69,10 +76,9 @@ class AddLockViewController: UIViewController{
                 createAlert(title: "Error", message: "Name is missing.")
             }
         }
-        print(">>> \(serialNumberTextField.text!)")
         return result
     }
-    
+
     
     func createAlert(title: String, message: String) {
         let alertVC = UIAlertController(title: title, message: message , preferredStyle: UIAlertControllerStyle.alert)

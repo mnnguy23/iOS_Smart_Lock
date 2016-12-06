@@ -12,7 +12,6 @@ import MapKit
 class userInterfaceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let LogInKey = "isUserLoggedIn"
-    let lockKey = "lockValue"
     let lockImages: [UIImage] = [#imageLiteral(resourceName: "Lock Filled-100.png"), #imageLiteral(resourceName: "Unlock Filled-100.png")]
     var lockEnabledStored = false
     var currentLock:Lock?
@@ -45,7 +44,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        lockEnabledStored = UserDefaults.standard.bool(forKey: lockKey)
+        lockEnabledStored = UserDefaults.standard.bool(forKey: Constant.LOCK_KEY)
         let tabBarVC = self.tabBarController as! MainTabBarController
         locks = tabBarVC.locks
       //  checkLockValue(lockValue: lockEnabledStored)
@@ -60,15 +59,15 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @IBAction func lockAccess(_ sender: AnyObject) {
-        lockEnabledStored = UserDefaults.standard.bool(forKey: lockKey)
+        lockEnabledStored = UserDefaults.standard.bool(forKey: Constant.LOCK_KEY)
         if(lockEnabledStored) {
-            UserDefaults.standard.set(false, forKey: lockKey)
+            UserDefaults.standard.set(false, forKey: Constant.LOCK_KEY)
             UserDefaults.standard.synchronize()
         } else {
-            UserDefaults.standard.set(true, forKey: lockKey)
+            UserDefaults.standard.set(true, forKey: Constant.LOCK_KEY)
             UserDefaults.standard.synchronize()
         }
-        lockEnabledStored = UserDefaults.standard.bool(forKey: lockKey)
+        lockEnabledStored = UserDefaults.standard.bool(forKey: Constant.LOCK_KEY)
     }
     
 
@@ -198,5 +197,9 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     func updateTabBarData() {
         let tbvc = self.tabBarController as! MainTabBarController
         tbvc.locks = self.locks
+    }
+    
+    private func getLocks() {
+        
     }
 }

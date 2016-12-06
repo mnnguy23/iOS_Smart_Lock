@@ -42,6 +42,8 @@
 		125136911DDA7F2100D85500 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125136901DDA7F2100D85500 /* ManagementViewController.swift */; };
 		12625A4C1DC7CE430021528A /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4B1DC7CE430021528A /* Lock.swift */; };
 		128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */; };
+		12BFB0641DF66E5D00FD8F49 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFB0631DF66E5D00FD8F49 /* Constant.swift */; };
+		12BFB06A1DF675D400FD8F49 /* ActivityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFB0691DF675D400FD8F49 /* ActivityLog.swift */; };
 		2CDB50331DDD5B29007AEC10 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB50321DDD5B29007AEC10 /* MapPin.swift */; };
 		2CDB50361DDE0F45007AEC10 /* Property Time Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */; };
 		2CDB50371DDE0F45007AEC10 /* Property Time-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB50351DDE0F45007AEC10 /* Property Time-30.png */; };
@@ -112,6 +114,8 @@
 		125136901DDA7F2100D85500 /* ManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		12625A4B1DC7CE430021528A /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 		128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockTableViewCell.swift; sourceTree = "<group>"; };
+		12BFB0631DF66E5D00FD8F49 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		12BFB0691DF675D400FD8F49 /* ActivityLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLog.swift; sourceTree = "<group>"; };
 		2CDB50321DDD5B29007AEC10 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Property Time Filled-30.png"; sourceTree = "<group>"; };
 		2CDB50351DDE0F45007AEC10 /* Property Time-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Property Time-30.png"; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 				12625A4B1DC7CE430021528A /* Lock.swift */,
 				2CDB50321DDD5B29007AEC10 /* MapPin.swift */,
 				2CDB503D1DDE1E24007AEC10 /* User.swift */,
+				12BFB0631DF66E5D00FD8F49 /* Constant.swift */,
+				12BFB0691DF675D400FD8F49 /* ActivityLog.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -422,6 +428,7 @@
 			files = (
 				2CDB503E1DDE1E24007AEC10 /* User.swift in Sources */,
 				2CDB503C1DDE1260007AEC10 /* LogsTableViewController.swift in Sources */,
+				12BFB0641DF66E5D00FD8F49 /* Constant.swift in Sources */,
 				1241229D1DBD67D200D18C9C /* LoginViewController.swift in Sources */,
 				1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */,
 				2CDB50391DDE105D007AEC10 /* MainTabBarController.swift in Sources */,
@@ -430,6 +437,7 @@
 				12625A4C1DC7CE430021528A /* Lock.swift in Sources */,
 				124122A51DBD7CD400D18C9C /* userInterfaceViewController.swift in Sources */,
 				2CDB50331DDD5B29007AEC10 /* MapPin.swift in Sources */,
+				12BFB06A1DF675D400FD8F49 /* ActivityLog.swift in Sources */,
 				128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */,
 				1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */,
 				2CDB50441DDE222D007AEC10 /* UsersTableViewController.swift in Sources */,

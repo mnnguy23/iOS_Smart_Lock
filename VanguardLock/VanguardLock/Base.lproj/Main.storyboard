@@ -183,7 +183,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJ1-9a-OD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lup-dB-hHH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1901.5999999999999" y="-1983.9580209895055"/>
+            <point key="canvasLocation" x="2014" y="-1980"/>
         </scene>
         <!--Home-->
         <scene sceneID="war-an-Sgr">
@@ -250,32 +250,18 @@
                                                         <constraint firstAttribute="height" constant="30" id="XeJ-4q-t5g"/>
                                                     </constraints>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIv-ED-QH7">
-                                                    <rect key="frame" x="312" y="8" width="55" height="28"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Manage">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="Tqm-Gk-nvd" kind="presentation" identifier="managementSegue" id="IBR-TU-CsX"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="fjK-YX-hEB" firstAttribute="centerX" secondItem="sZT-g3-V4x" secondAttribute="centerX" id="2c3-yA-vSm"/>
                                                 <constraint firstItem="J5v-vv-g3K" firstAttribute="centerY" secondItem="sZT-g3-V4x" secondAttribute="centerY" id="49Q-dV-nV3"/>
-                                                <constraint firstItem="aIv-ED-QH7" firstAttribute="centerY" secondItem="sZT-g3-V4x" secondAttribute="centerY" id="MLd-UD-koj"/>
                                                 <constraint firstItem="fjK-YX-hEB" firstAttribute="centerY" secondItem="sZT-g3-V4x" secondAttribute="centerY" id="Nrp-jV-JcQ"/>
                                                 <constraint firstItem="J5v-vv-g3K" firstAttribute="leading" secondItem="sZT-g3-V4x" secondAttribute="leadingMargin" id="XeQ-dO-hUb"/>
                                                 <constraint firstItem="J5v-vv-g3K" firstAttribute="top" secondItem="sZT-g3-V4x" secondAttribute="topMargin" constant="3.5" id="xau-5G-XIA"/>
-                                                <constraint firstItem="aIv-ED-QH7" firstAttribute="top" secondItem="sZT-g3-V4x" secondAttribute="top" constant="8" id="yY7-0P-JJo"/>
-                                                <constraint firstAttribute="trailing" secondItem="aIv-ED-QH7" secondAttribute="trailing" constant="8" id="yoL-aV-ugx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lockButton" destination="fjK-YX-hEB" id="Wzx-Nh-Vqj"/>
                                             <outlet property="lockLabel" destination="J5v-vv-g3K" id="W9N-Pt-5Bk"/>
-                                            <outlet property="manageButton" destination="aIv-ED-QH7" id="W4u-hB-NDO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -305,12 +291,68 @@
                         <outlet property="addLockButton" destination="5kn-fb-dLc" id="lez-gs-Yu6"/>
                         <outlet property="addLockLabel" destination="4rE-IA-dFA" id="eTO-h4-C81"/>
                         <outlet property="locksTableView" destination="NPM-60-3Gb" id="rin-M8-oD2"/>
+                        <segue destination="Tqm-Gk-nvd" kind="presentation" identifier="managementSegue" id="Mwc-Qo-SPI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Prh-xi-bSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="2Rp-Lp-9Z4"/>
             </objects>
             <point key="canvasLocation" x="2013.5999999999999" y="-1274.2128935532235"/>
+        </scene>
+        <!--Lock Logs-->
+        <scene sceneID="CLP-vh-N9h">
+            <objects>
+                <tableViewController id="Q7I-pd-I5L" customClass="LogsTableViewController" customModule="VanguardLock" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M9q-q9-5TJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="41U-gN-Ktn">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Lock Logs" id="WUC-i4-CDI"/>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="logCell" textLabel="d06-N5-wV1" detailTextLabel="CFQ-QT-Veq" style="IBUITableViewCellStyleSubtitle" id="WTG-Fc-2gy">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WTG-Fc-2gy" id="E1S-Iz-ljH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d06-N5-wV1">
+                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CFQ-QT-Veq">
+                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Q7I-pd-I5L" id="Ks7-E3-oPT"/>
+                            <outlet property="delegate" destination="Q7I-pd-I5L" id="aR8-jj-oBC"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Lock Logs" image="Property Time-30.png" selectedImage="Property Time Filled-30.png" id="Cvj-YX-ZFW"/>
+                    <connections>
+                        <outlet property="tableView" destination="M9q-q9-5TJ" id="7V5-B1-zm5"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npa-RJ-SLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="-1274"/>
         </scene>
         <!--Management View Controller-->
         <scene sceneID="Gwn-Ir-vI4">
@@ -324,9 +366,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RbB-3h-QEg">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbB-3h-QEg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Manage Lock" id="CgI-NZ-Ctu">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="XGs-Cf-bqB">
@@ -337,13 +378,28 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JGF-qc-l0q">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RbB-3h-QEg" firstAttribute="leading" secondItem="uWO-HD-VgQ" secondAttribute="leading" id="LsG-8f-WtV"/>
+                            <constraint firstItem="JGF-qc-l0q" firstAttribute="leading" secondItem="uWO-HD-VgQ" secondAttribute="leading" id="R6D-eQ-b22"/>
+                            <constraint firstAttribute="trailing" secondItem="JGF-qc-l0q" secondAttribute="trailing" id="VBv-59-OTu"/>
+                            <constraint firstItem="JGF-qc-l0q" firstAttribute="top" secondItem="RbB-3h-QEg" secondAttribute="bottom" id="kF2-KJ-Tbz"/>
+                            <constraint firstItem="3ui-t3-DW4" firstAttribute="top" secondItem="JGF-qc-l0q" secondAttribute="bottom" id="lms-RD-7JE"/>
+                            <constraint firstAttribute="trailing" secondItem="RbB-3h-QEg" secondAttribute="trailing" id="oI2-Xf-T3f"/>
+                            <constraint firstItem="RbB-3h-QEg" firstAttribute="top" secondItem="uWO-HD-VgQ" secondAttribute="top" id="qtJ-rf-84j"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="JGF-qc-l0q" id="MzP-mM-Lre"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj4-A1-HH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2879" y="-1274"/>
+            <point key="canvasLocation" x="2877.5999999999999" y="-1274.2128935532235"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rC2-WO-ajo">
@@ -490,7 +546,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email account" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="dL5-oO-ESY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="dL5-oO-ESY">
                                 <rect key="frame" x="74" y="165" width="285" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -587,10 +643,46 @@
             </objects>
             <point key="canvasLocation" x="361" y="139"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Users-->
+        <scene sceneID="lY6-lO-lO2">
+            <objects>
+                <tableViewController id="W2A-UK-tni" customClass="UsersTableViewController" customModule="VanguardLock" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yh3-wE-5u0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="NwA-xn-xWj">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Users" id="c65-PD-v0z"/>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" id="cj0-PZ-hpF">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cj0-PZ-hpF" id="Irk-gh-91l">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W2A-UK-tni" id="HIT-H5-iMH"/>
+                            <outlet property="delegate" destination="W2A-UK-tni" id="9l6-PX-lTy"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Users" image="Gender Neutral User-30.png" selectedImage="Gender Neutral User Filled-30.png" id="6jH-7C-9YE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlU-tR-wUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="-576"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
         <scene sceneID="SGd-yd-tf2">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A5a-Nd-fVT" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A5a-Nd-fVT" customClass="MainTabBarController" customModule="VanguardLock" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ma4-kQ-bNy">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -599,6 +691,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="gPo-cx-7HQ" kind="relationship" relationship="viewControllers" id="Vvh-xn-vfC"/>
+                        <segue destination="Q7I-pd-I5L" kind="relationship" relationship="viewControllers" id="nJW-w6-Lmg"/>
+                        <segue destination="W2A-UK-tni" kind="relationship" relationship="viewControllers" id="YVF-dt-aD7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMJ-zN-MTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -611,10 +705,14 @@
         <image name="Cloud-96.png" width="96" height="96"/>
         <image name="Contacts-100.png" width="100" height="100"/>
         <image name="Door Filled-50.png" width="50" height="50"/>
+        <image name="Gender Neutral User Filled-30.png" width="30" height="30"/>
+        <image name="Gender Neutral User-30.png" width="30" height="30"/>
         <image name="Home Automation Filled" width="25" height="25"/>
         <image name="Home Automation-30.png" width="30" height="30"/>
         <image name="Message-50.png" width="50" height="50"/>
         <image name="Password Check-50.png" width="50" height="50"/>
         <image name="Password Filled-100.png" width="100" height="100"/>
+        <image name="Property Time Filled-30.png" width="30" height="30"/>
+        <image name="Property Time-30.png" width="30" height="30"/>
     </resources>
 </document>

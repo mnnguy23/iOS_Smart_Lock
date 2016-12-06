@@ -41,8 +41,16 @@
 		1243C8691DCB002000773481 /* Lock 2 Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 1243C8671DCB002000773481 /* Lock 2 Filled-30.png */; };
 		125136911DDA7F2100D85500 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125136901DDA7F2100D85500 /* ManagementViewController.swift */; };
 		12625A4C1DC7CE430021528A /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4B1DC7CE430021528A /* Lock.swift */; };
-		12625A4E1DC7D2270021528A /* VirtualKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4D1DC7D2270021528A /* VirtualKey.swift */; };
 		128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */; };
+		2CDB50331DDD5B29007AEC10 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB50321DDD5B29007AEC10 /* MapPin.swift */; };
+		2CDB50361DDE0F45007AEC10 /* Property Time Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */; };
+		2CDB50371DDE0F45007AEC10 /* Property Time-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB50351DDE0F45007AEC10 /* Property Time-30.png */; };
+		2CDB50391DDE105D007AEC10 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB50381DDE105D007AEC10 /* MainTabBarController.swift */; };
+		2CDB503C1DDE1260007AEC10 /* LogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB503B1DDE1260007AEC10 /* LogsTableViewController.swift */; };
+		2CDB503E1DDE1E24007AEC10 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB503D1DDE1E24007AEC10 /* User.swift */; };
+		2CDB50411DDE20A7007AEC10 /* Gender Neutral User Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB503F1DDE20A7007AEC10 /* Gender Neutral User Filled-30.png */; };
+		2CDB50421DDE20A7007AEC10 /* Gender Neutral User-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB50401DDE20A7007AEC10 /* Gender Neutral User-30.png */; };
+		2CDB50441DDE222D007AEC10 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB50431DDE222D007AEC10 /* UsersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,8 +111,16 @@
 		1243C8671DCB002000773481 /* Lock 2 Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lock 2 Filled-30.png"; sourceTree = "<group>"; };
 		125136901DDA7F2100D85500 /* ManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		12625A4B1DC7CE430021528A /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
-		12625A4D1DC7D2270021528A /* VirtualKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualKey.swift; sourceTree = "<group>"; };
 		128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockTableViewCell.swift; sourceTree = "<group>"; };
+		2CDB50321DDD5B29007AEC10 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Property Time Filled-30.png"; sourceTree = "<group>"; };
+		2CDB50351DDE0F45007AEC10 /* Property Time-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Property Time-30.png"; sourceTree = "<group>"; };
+		2CDB50381DDE105D007AEC10 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2CDB503B1DDE1260007AEC10 /* LogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsTableViewController.swift; sourceTree = "<group>"; };
+		2CDB503D1DDE1E24007AEC10 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2CDB503F1DDE20A7007AEC10 /* Gender Neutral User Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gender Neutral User Filled-30.png"; sourceTree = "<group>"; };
+		2CDB50401DDE20A7007AEC10 /* Gender Neutral User-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gender Neutral User-30.png"; sourceTree = "<group>"; };
+		2CDB50431DDE222D007AEC10 /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +204,10 @@
 		1241228A1DBD661000D18C9C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2CDB503F1DDE20A7007AEC10 /* Gender Neutral User Filled-30.png */,
+				2CDB50401DDE20A7007AEC10 /* Gender Neutral User-30.png */,
+				2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */,
+				2CDB50351DDE0F45007AEC10 /* Property Time-30.png */,
 				1243C8661DCB002000773481 /* Lock 2-30.png */,
 				1243C8671DCB002000773481 /* Lock 2 Filled-30.png */,
 				124122C21DBE8AAF00D18C9C /* Door Filled-50.png */,
@@ -223,6 +243,9 @@
 				1210023C1DC7F3720079C7AA /* AddLockViewController.swift */,
 				128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */,
 				125136901DDA7F2100D85500 /* ManagementViewController.swift */,
+				2CDB50381DDE105D007AEC10 /* MainTabBarController.swift */,
+				2CDB503B1DDE1260007AEC10 /* LogsTableViewController.swift */,
+				2CDB50431DDE222D007AEC10 /* UsersTableViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -231,7 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				12625A4B1DC7CE430021528A /* Lock.swift */,
-				12625A4D1DC7D2270021528A /* VirtualKey.swift */,
+				2CDB50321DDD5B29007AEC10 /* MapPin.swift */,
+				2CDB503D1DDE1E24007AEC10 /* User.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -344,13 +368,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDB50421DDE20A7007AEC10 /* Gender Neutral User-30.png in Resources */,
 				124122971DBD663E00D18C9C /* Add User Male-100.png in Resources */,
 				124122941DBD663E00D18C9C /* Add Key Filled-50.png in Resources */,
 				1243C8691DCB002000773481 /* Lock 2 Filled-30.png in Resources */,
 				124122671DBD648A00D18C9C /* LaunchScreen.storyboard in Resources */,
 				124122BE1DBE598700D18C9C /* Key Filled-30.png in Resources */,
+				2CDB50371DDE0F45007AEC10 /* Property Time-30.png in Resources */,
 				124122BF1DBE598700D18C9C /* Key_75.png in Resources */,
 				124122C31DBE8AAF00D18C9C /* Door Filled-50.png in Resources */,
+				2CDB50411DDE20A7007AEC10 /* Gender Neutral User Filled-30.png in Resources */,
 				124122961DBD663E00D18C9C /* Unlock Filled-100.png in Resources */,
 				124122B51DBDA84A00D18C9C /* Home Automation Filled-30.png in Resources */,
 				124122C11DBE598700D18C9C /* Key-50.png in Resources */,
@@ -362,6 +389,7 @@
 				124122B41DBDA84A00D18C9C /* Home Automation-30.png in Resources */,
 				1241228C1DBD661C00D18C9C /* Cloud-96.png in Resources */,
 				124122C01DBE598700D18C9C /* Key-30.png in Resources */,
+				2CDB50361DDE0F45007AEC10 /* Property Time Filled-30.png in Resources */,
 				124122A31DBD699800D18C9C /* Password Check-50.png in Resources */,
 				1243C8681DCB002000773481 /* Lock 2-30.png in Resources */,
 				124122A11DBD698A00D18C9C /* Contacts-100.png in Resources */,
@@ -392,15 +420,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDB503E1DDE1E24007AEC10 /* User.swift in Sources */,
+				2CDB503C1DDE1260007AEC10 /* LogsTableViewController.swift in Sources */,
 				1241229D1DBD67D200D18C9C /* LoginViewController.swift in Sources */,
 				1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */,
+				2CDB50391DDE105D007AEC10 /* MainTabBarController.swift in Sources */,
 				1241229F1DBD682300D18C9C /* RegistrationViewController.swift in Sources */,
 				1241225D1DBD648A00D18C9C /* AppDelegate.swift in Sources */,
 				12625A4C1DC7CE430021528A /* Lock.swift in Sources */,
 				124122A51DBD7CD400D18C9C /* userInterfaceViewController.swift in Sources */,
-				12625A4E1DC7D2270021528A /* VirtualKey.swift in Sources */,
+				2CDB50331DDD5B29007AEC10 /* MapPin.swift in Sources */,
 				128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */,
 				1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */,
+				2CDB50441DDE222D007AEC10 /* UsersTableViewController.swift in Sources */,
 				125136911DDA7F2100D85500 /* ManagementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

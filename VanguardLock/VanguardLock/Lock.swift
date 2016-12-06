@@ -13,6 +13,9 @@ class Lock {
     var name: String
     var lockId: String
     var location: String
+    var logs:[String] = []
+    var lockStatus:[String] = []
+    var users:[User] = []
     
     init(lockId: String, name: String, location: String) {
         self.lockId = lockId

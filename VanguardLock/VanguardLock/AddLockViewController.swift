@@ -46,7 +46,7 @@ class AddLockViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "saveLockDetail"{
-                lock = Lock(lockId: serialNumberTextField.text!, name: nameField.text!, location: addressTextField.text!)
+                self.lock = Lock(lockId: self.serialNumberTextField.text!, name: self.nameField.text!, location: self.addressTextField.text!)
             }
     }
     
@@ -78,7 +78,7 @@ class AddLockViewController: UIViewController{
         }
         return result
     }
-
+    
     
     func createAlert(title: String, message: String) {
         let alertVC = UIAlertController(title: title, message: message , preferredStyle: UIAlertControllerStyle.alert)

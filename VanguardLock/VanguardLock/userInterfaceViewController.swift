@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class userInterfaceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -14,10 +15,8 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     let lockKey = "lockValue"
     let lockImages: [UIImage] = [#imageLiteral(resourceName: "Lock Filled-100.png"), #imageLiteral(resourceName: "Unlock Filled-100.png")]
     var lockEnabledStored = false
-    
-    var locks:[Lock] = [Lock(lockId: "1234", name: "Home", location: "3519 Harbor Pass lane, Friendswood, TX 77546"), Lock(lockId: "5678", name: "Garage", location: "3519 Harbor Pass lane, Friendswood, TX 77546")]
-    var keys:[VirtualKey] = []
-    
+    var currentLock:Lock?
+    var locks:[Lock] = [Lock(lockId: "1234", name: "ERP", location: "5000 Gulf Fwy #226, Houston, TX 77023"), Lock(lockId: "5678", name: "UH", location: "4800 Calhoun Rd, Houston, TX 77004")]
  
     @IBOutlet weak var addLockButton: UIButton!
     @IBOutlet weak var addLockLabel: UILabel!
@@ -31,9 +30,13 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         self.locksTableView.delegate = self
         self.locksTableView.dataSource = self
         print(">>> \(self.locks.count)")
-
+        self.locks[0].users.append(User(username: "TestUser"))
+        self.locks[1].users.append(User(username: "TA"))
+        self.locks[1].users.append(User(username: "Professor"))
+        updateTabBarData()
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,6 +46,8 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         lockEnabledStored = UserDefaults.standard.bool(forKey: lockKey)
+        let tabBarVC = self.tabBarController as! MainTabBarController
+        locks = tabBarVC.locks
       //  checkLockValue(lockValue: lockEnabledStored)
     }
     
@@ -85,6 +90,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
             if let lock = lockDetailsViewController.lock {
                 locks.append(lock)
             }
+            self.updateTabBarData()
             self.locksTableView.reloadData()
         }
         //checkForLocks()
@@ -108,6 +114,33 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         toggleLock(lock: locks[indexPath.row])
         self.locksTableView.reloadRows(at: [indexPath], with: .none)
     }
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: "Delete", handler: {action, index in
+            self.locks.remove(at: indexPath.row)
+            self.locksTableView.deleteRows(at: [indexPath], with: .automatic)
+            self.updateTabBarData()
+            
+        })
+        delete.backgroundColor = UIColor.red
+        
+        let map = UITableViewRowAction(style: .normal, title: "Map", handler: {action, index in
+            self.currentLock = self.locks[indexPath.row]
+            self.performSegue(withIdentifier: "managementSegue", sender: nil)
+        })
+        map.backgroundColor = UIColor.green
+        
+        
+        return [delete, map]
+        
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
     
     
     func returnLockCell(lock: Lock, cell: LockTableViewCell) -> LockTableViewCell {
@@ -129,17 +162,41 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func toggleLock(lock: Lock) {
+        var lockStatus:String
         if lock.locked {
             lock.locked = false
+            lockStatus = "Unlocked"
         } else {
             lock.locked = true
+            lockStatus = "Locked"
         }
-        print(lock.locked)
+        let date = NSDate()
+        let calender = NSCalendar.current
+        let hour = calender.component(.hour, from: date as Date)
+        let minutes = calender.component(.minute, from: date as Date)
+        let day = calender.component(.day, from: date as Date)
+        let month = calender.component(.month, from: date as Date)
+        let year = calender.component(.year, from: date as Date)
+        
+        let completeTime = "Day: \(year)-\(month)-\(day) Time: \(hour)-\(minutes)"
+
+        lock.lockStatus.append(lockStatus)
+        lock.logs.append(completeTime)
+        updateTabBarData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "managementSegue" {
-            
+            if let managementVC = segue.destination as? ManagementViewController {
+                if currentLock != nil {
+                    managementVC.lock = currentLock
+                }
+            }
         }
+    }
+    
+    func updateTabBarData() {
+        let tbvc = self.tabBarController as! MainTabBarController
+        tbvc.locks = self.locks
     }
 }

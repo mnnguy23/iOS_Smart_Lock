@@ -97,49 +97,68 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZu-YN-jBg">
-                                <rect key="frame" x="16" y="61" width="45" height="21"/>
+                                <rect key="frame" x="16" y="61" width="45" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yy-WC-Rwl">
+                                <rect key="frame" x="16" y="189" width="114" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uak-Ha-zIH">
-                                <rect key="frame" x="16" y="90" width="343" height="30"/>
+                                <rect key="frame" x="16" y="89.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDS-mp-K5o">
-                                <rect key="frame" x="16" y="131" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoZ-BT-s6S">
-                                <rect key="frame" x="16" y="198" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Lock's serial number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6U-sl-nHc">
-                                <rect key="frame" x="16" y="160" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the Lock's serial number again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abl-Ly-akT">
-                                <rect key="frame" x="16" y="227" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physical Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yy-WC-Rwl">
-                                <rect key="frame" x="16" y="265" width="130" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a physical address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hp5-vw-aFu">
-                                <rect key="frame" x="16" y="294" width="343" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="974-kX-tAB">
+                                <rect key="frame" x="16" y="131" width="343" height="50.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="xNI-ky-Els">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="50.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDS-mp-K5o">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6U-sl-nHc">
+                                                <rect key="frame" x="0.0" y="20.5" width="166" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ljG-zn-zYh">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="50.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoZ-BT-s6S">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter it again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abl-Ly-akT">
+                                                <rect key="frame" x="0.0" y="20.5" width="171.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Abl-Ly-akT" firstAttribute="leading" secondItem="ljG-zn-zYh" secondAttribute="leading" id="3C0-Bs-nxL"/>
+                                            <constraint firstAttribute="trailing" secondItem="Abl-Ly-akT" secondAttribute="trailing" id="4WT-qQ-HYx"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your street Address here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hp5-vw-aFu">
+                                <rect key="frame" x="16" y="217.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -147,26 +166,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="g6U-sl-nHc" firstAttribute="top" secondItem="iDS-mp-K5o" secondAttribute="bottom" constant="8" id="7TO-Mk-Nk6"/>
-                            <constraint firstItem="9Yy-WC-Rwl" firstAttribute="top" secondItem="Abl-Ly-akT" secondAttribute="bottom" constant="8" id="8Qm-0d-GiG"/>
+                            <constraint firstItem="9Yy-WC-Rwl" firstAttribute="top" secondItem="2Pi-TM-bqt" secondAttribute="bottom" constant="134" id="1Kx-gK-3Hh"/>
+                            <constraint firstItem="974-kX-tAB" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="8Ae-sh-gHL"/>
+                            <constraint firstItem="974-kX-tAB" firstAttribute="top" secondItem="Uak-Ha-zIH" secondAttribute="bottom" constant="11.5" id="A5y-g1-rfb"/>
                             <constraint firstItem="CZu-YN-jBg" firstAttribute="top" secondItem="2Pi-TM-bqt" secondAttribute="bottom" constant="6" id="AhG-x2-wbM"/>
-                            <constraint firstItem="iDS-mp-K5o" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="DJl-P4-vW6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uak-Ha-zIH" secondAttribute="trailing" id="DN8-ZQ-njq"/>
                             <constraint firstItem="CZu-YN-jBg" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="HrZ-x6-yCK"/>
-                            <constraint firstItem="Abl-Ly-akT" firstAttribute="top" secondItem="FoZ-BT-s6S" secondAttribute="bottom" constant="8" id="J8Z-TO-l7o"/>
-                            <constraint firstItem="iDS-mp-K5o" firstAttribute="top" secondItem="2Pi-TM-bqt" secondAttribute="bottom" constant="76" id="LFc-k4-1B6"/>
-                            <constraint firstItem="g6U-sl-nHc" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="Lrk-zF-SwQ"/>
                             <constraint firstItem="hp5-vw-aFu" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="POG-Zd-1PT"/>
-                            <constraint firstItem="Abl-Ly-akT" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="QQT-BO-sLf"/>
-                            <constraint firstItem="Abl-Ly-akT" firstAttribute="trailing" secondItem="fOD-DP-6PJ" secondAttribute="trailingMargin" id="UPA-tC-DxT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="974-kX-tAB" secondAttribute="trailing" id="WH7-4y-sIK"/>
                             <constraint firstItem="2Pi-TM-bqt" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leading" id="WgB-df-G0R"/>
                             <constraint firstAttribute="trailing" secondItem="2Pi-TM-bqt" secondAttribute="trailing" id="bUs-zU-6RA"/>
                             <constraint firstItem="Uak-Ha-zIH" firstAttribute="top" secondItem="CZu-YN-jBg" secondAttribute="bottom" constant="8" id="brP-Fu-blq"/>
                             <constraint firstItem="Uak-Ha-zIH" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="e4u-Ca-nO1"/>
                             <constraint firstItem="hp5-vw-aFu" firstAttribute="top" secondItem="9Yy-WC-Rwl" secondAttribute="bottom" constant="8" id="eVw-h9-sgP"/>
-                            <constraint firstItem="FoZ-BT-s6S" firstAttribute="top" secondItem="g6U-sl-nHc" secondAttribute="bottom" constant="8" id="gQ7-8u-WJu"/>
-                            <constraint firstItem="FoZ-BT-s6S" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="qqM-d3-6V8"/>
-                            <constraint firstItem="g6U-sl-nHc" firstAttribute="trailing" secondItem="fOD-DP-6PJ" secondAttribute="trailingMargin" id="rvA-an-ais"/>
                             <constraint firstItem="9Yy-WC-Rwl" firstAttribute="leading" secondItem="fOD-DP-6PJ" secondAttribute="leadingMargin" id="tzb-si-7H0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hp5-vw-aFu" secondAttribute="trailing" id="wFr-rD-AvY"/>
                             <constraint firstItem="2Pi-TM-bqt" firstAttribute="top" secondItem="uUB-gp-UXB" secondAttribute="bottom" constant="-20" id="ydK-qM-3ov"/>
@@ -183,7 +195,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJ1-9a-OD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lup-dB-hHH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2014" y="-1980"/>
+            <point key="canvasLocation" x="2014" y="-1274"/>
         </scene>
         <!--Home-->
         <scene sceneID="war-an-Sgr">
@@ -233,7 +245,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l2J-Ny-J4h" id="sZT-g3-V4x">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5v-vv-g3K">
@@ -297,7 +309,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Prh-xi-bSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="2Rp-Lp-9Z4"/>
             </objects>
-            <point key="canvasLocation" x="2013.5999999999999" y="-1274.2128935532235"/>
+            <point key="canvasLocation" x="2014" y="-576"/>
         </scene>
         <!--Lock Logs-->
         <scene sceneID="CLP-vh-N9h">
@@ -399,7 +411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj4-A1-HH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2877.5999999999999" y="-1274.2128935532235"/>
+            <point key="canvasLocation" x="2903" y="-576"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rC2-WO-ajo">
@@ -663,7 +675,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cj0-PZ-hpF" id="Irk-gh-91l">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

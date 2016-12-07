@@ -141,7 +141,6 @@ class RegistrationViewController: UIViewController {
                 print("Error: did not receive data")
                 return
             }
-            print("Response Data: \(responseData)")
             
             do {
                 guard let receivedUser = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? Any else {

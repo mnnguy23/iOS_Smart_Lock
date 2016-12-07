@@ -62,9 +62,6 @@ class LoginViewController: UIViewController {
                 let userData = user as! [String: AnyObject]
                 let username = userData["username"] as! String
                 let userID = userData["user_id"] as! Int
-                
-                print("UserName: \(username)")
-                
                 if(username == self.emailTextField.text!) {
                     isCorrect = true
                     id = userID
@@ -82,9 +79,6 @@ class LoginViewController: UIViewController {
             for user in users {
                 let userData = user as! [String: AnyObject]
                 let password = userData["password"] as! String
-                
-                print("UserName: \(password)")
-                
                 if(password == self.passwordTextField.text!) {
                     isCorrect = true
                 }

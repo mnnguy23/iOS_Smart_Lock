@@ -15,7 +15,8 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     let lockImages: [UIImage] = [#imageLiteral(resourceName: "Lock Filled-100.png"), #imageLiteral(resourceName: "Unlock Filled-100.png")]
     var lockEnabledStored = false
     var currentLock:Lock?
-    var locks:[Lock] = [Lock(lockId: "1234", name: "ERP", location: "5000 Gulf Fwy #226, Houston, TX 77023"), Lock(lockId: "5678", name: "UH", location: "4800 Calhoun Rd, Houston, TX 77004")]
+    var locks:[Lock] = []
+    let lockEndPoint = "\(Constant.BASE_API)/lock/all"
  
     @IBOutlet weak var addLockButton: UIButton!
     @IBOutlet weak var addLockLabel: UILabel!
@@ -28,10 +29,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         self.locksTableView.delegate = self
         self.locksTableView.dataSource = self
-        print(">>> \(self.locks.count)")
-        self.locks[0].users.append(User(username: "TestUser"))
-        self.locks[1].users.append(User(username: "TA"))
-        self.locks[1].users.append(User(username: "Professor"))
+        getLocks()
         updateTabBarData()
         // Do any additional setup after loading the view.
     }
@@ -45,8 +43,6 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         lockEnabledStored = UserDefaults.standard.bool(forKey: Constant.LOCK_KEY)
-        let tabBarVC = self.tabBarController as! MainTabBarController
-        locks = tabBarVC.locks
       //  checkLockValue(lockValue: lockEnabledStored)
     }
     
@@ -200,6 +196,56 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     private func getLocks() {
+        guard let url = URL(string: lockEndPoint) else {
+            print("Could not create URL")
+            return
+        }
         
+        let urlRequest = URLRequest(url: url)
+        let session = URLSession.shared
+        
+        DispatchQueue.main.async {
+            let task = session.dataTask(with: urlRequest,
+                                        completionHandler: {(data, response, error) in
+                                            if error != nil {
+                                                print("Error found \(error)")
+                                                return
+                                            }
+                                            
+                                            guard let responseData = data else {
+                                                print("No data")
+                                                return
+                                            }
+                                            
+                                            do {
+                                                guard let jsonLocks = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? [AnyObject] else {
+                                                    print("could not get JSON from responseData as NSArray")
+                                                    return
+                                                }
+                                                print(jsonLocks)
+                                                
+                                                for jsonLock in jsonLocks {
+                                                    let lockData = jsonLock as! [String: AnyObject]
+                                                    let name = lockData["lock_name"] as! String
+                                                    let owner = lockData["owner"] as! Int
+                                                    let address = lockData["address"] as! String
+                                                    let id = lockData["lock_id"] as! Int
+                                                    let serialNumber = lockData["serial_number"] as! String
+                                                    let currentUser = UserDefaults.standard.integer(forKey: Constant.USER_ID)
+                                                    if(owner == currentUser) {
+                                                        var newLock:Lock = Lock(lockId: id, owner: owner, name: name, location: address, serialNumber: serialNumber)
+                                                        self.locks.append(newLock)
+                                                    }
+                                                    
+                                                }
+                                                
+                                            } catch {
+                                                print("error parsing response from /lock/all")
+                                                return
+                                            }
+                                            self.locksTableView.reloadData()
+            })
+            task.resume()
+        }
     }
 }

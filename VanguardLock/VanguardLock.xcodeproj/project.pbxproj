@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210023C1DC7F3720079C7AA /* AddLockViewController.swift */; };
+		1237F4061DF8E31000C0A61B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237F4051DF8E31000C0A61B /* Log.swift */; };
+		1237F4081DF9242700C0A61B /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1237F4071DF9242700C0A61B /* home.jpg */; };
+		1237F40A1DF944D000C0A61B /* AuthorizedLockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237F4091DF944D000C0A61B /* AuthorizedLockTableViewController.swift */; };
+		1237F40E1DF9489A00C0A61B /* ALockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237F40D1DF9489A00C0A61B /* ALockTableViewCell.swift */; };
+		1241225D1DBD648A00D18C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241225C1DBD648A00D18C9C /* AppDelegate.swift */; };
+		1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241225E1DBD648A00D18C9C /* HomeViewController.swift */; };
+		124122621DBD648A00D18C9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124122601DBD648A00D18C9C /* Main.storyboard */; };
+		124122641DBD648A00D18C9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124122631DBD648A00D18C9C /* Assets.xcassets */; };
+		124122671DBD648A00D18C9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124122651DBD648A00D18C9C /* LaunchScreen.storyboard */; };
+		124122721DBD648A00D18C9C /* VanguardLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124122711DBD648A00D18C9C /* VanguardLockTests.swift */; };
+		1241227D1DBD648A00D18C9C /* VanguardLockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241227C1DBD648A00D18C9C /* VanguardLockUITests.swift */; };
+		1241228C1DBD661C00D18C9C /* Cloud-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 1241228B1DBD661C00D18C9C /* Cloud-96.png */; };
+		1241228E1DBD662100D18C9C /* Password Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 1241228D1DBD662100D18C9C /* Password Filled-100.png */; };
+		124122941DBD663E00D18C9C /* Add Key Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1241228F1DBD663E00D18C9C /* Add Key Filled-50.png */; };
+		124122951DBD663E00D18C9C /* Lock Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122901DBD663E00D18C9C /* Lock Filled-100.png */; };
+		124122961DBD663E00D18C9C /* Unlock Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122911DBD663E00D18C9C /* Unlock Filled-100.png */; };
+		124122971DBD663E00D18C9C /* Add User Male-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122921DBD663E00D18C9C /* Add User Male-100.png */; };
+		124122981DBD663E00D18C9C /* Message-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122931DBD663E00D18C9C /* Message-50.png */; };
+		1241229A1DBD669400D18C9C /* Exit-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122991DBD669400D18C9C /* Exit-50.png */; };
+		1241229D1DBD67D200D18C9C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241229C1DBD67D200D18C9C /* LoginViewController.swift */; };
+		1241229F1DBD682300D18C9C /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241229E1DBD682300D18C9C /* RegistrationViewController.swift */; };
+		124122A11DBD698A00D18C9C /* Contacts-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122A01DBD698A00D18C9C /* Contacts-100.png */; };
+		124122A31DBD699800D18C9C /* Password Check-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122A21DBD699800D18C9C /* Password Check-50.png */; };
+		124122A51DBD7CD400D18C9C /* userInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */; };
+		124122B41DBDA84A00D18C9C /* Home Automation-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B21DBDA84A00D18C9C /* Home Automation-30.png */; };
+		124122B51DBDA84A00D18C9C /* Home Automation Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B31DBDA84A00D18C9C /* Home Automation Filled-30.png */; };
+		124122BC1DBE598700D18C9C /* Key Filled-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B61DBE598700D18C9C /* Key Filled-75.png */; };
+		124122BD1DBE598700D18C9C /* Key Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B71DBE598700D18C9C /* Key Filled-50.png */; };
+		124122BE1DBE598700D18C9C /* Key Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B81DBE598700D18C9C /* Key Filled-30.png */; };
+		124122BF1DBE598700D18C9C /* Key_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122B91DBE598700D18C9C /* Key_75.png */; };
+		124122C01DBE598700D18C9C /* Key-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122BA1DBE598700D18C9C /* Key-30.png */; };
+		124122C11DBE598700D18C9C /* Key-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122BB1DBE598700D18C9C /* Key-50.png */; };
+		124122C31DBE8AAF00D18C9C /* Door Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 124122C21DBE8AAF00D18C9C /* Door Filled-50.png */; };
+		1243C8681DCB002000773481 /* Lock 2-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 1243C8661DCB002000773481 /* Lock 2-30.png */; };
+		1243C8691DCB002000773481 /* Lock 2 Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 1243C8671DCB002000773481 /* Lock 2 Filled-30.png */; };
+		125136911DDA7F2100D85500 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125136901DDA7F2100D85500 /* ManagementViewController.swift */; };
+		12625A4C1DC7CE430021528A /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4B1DC7CE430021528A /* Lock.swift */; };
+		12715C461DF8682400B1F640 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12715C451DF8682400B1F640 /* AddUserViewController.swift */; };
+		128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */; };
+		12BFB0641DF66E5D00FD8F49 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFB0631DF66E5D00FD8F49 /* Constant.swift */; };
+		12BFB06A1DF675D400FD8F49 /* ActivityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFB0691DF675D400FD8F49 /* ActivityLog.swift */; };
+		2CDB50331DDD5B29007AEC10 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB50321DDD5B29007AEC10 /* MapPin.swift */; };
+		2CDB50361DDE0F45007AEC10 /* Property Time Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */; };
+		2CDB50371DDE0F45007AEC10 /* Property Time-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB50351DDE0F45007AEC10 /* Property Time-30.png */; };
+		2CDB50391DDE105D007AEC10 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB50381DDE105D007AEC10 /* MainTabBarController.swift */; };
+		2CDB503C1DDE1260007AEC10 /* LogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB503B1DDE1260007AEC10 /* LogsTableViewController.swift */; };
+		2CDB503E1DDE1E24007AEC10 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB503D1DDE1E24007AEC10 /* User.swift */; };
+		2CDB50411DDE20A7007AEC10 /* Gender Neutral User Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB503F1DDE20A7007AEC10 /* Gender Neutral User Filled-30.png */; };
+		2CDB50421DDE20A7007AEC10 /* Gender Neutral User-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB50401DDE20A7007AEC10 /* Gender Neutral User-30.png */; };
+		2CDB50441DDE222D007AEC10 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB50431DDE222D007AEC10 /* UsersTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1241226E1DBD648A00D18C9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 124122511DBD648A00D18C9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 124122581DBD648A00D18C9C;
+			remoteInfo = VanguardLock;
+		};
+		124122791DBD648A00D18C9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 124122511DBD648A00D18C9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 124122581DBD648A00D18C9C;
+			remoteInfo = VanguardLock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1210023C1DC7F3720079C7AA /* AddLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLockViewController.swift; sourceTree = "<group>"; };
+		1237F4051DF8E31000C0A61B /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		1237F4071DF9242700C0A61B /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
+		1237F4091DF944D000C0A61B /* AuthorizedLockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizedLockTableViewController.swift; sourceTree = "<group>"; };
+		1237F40D1DF9489A00C0A61B /* ALockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALockTableViewCell.swift; sourceTree = "<group>"; };
+		124122591DBD648A00D18C9C /* VanguardLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VanguardLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1241225C1DBD648A00D18C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1241225E1DBD648A00D18C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		124122611DBD648A00D18C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		124122631DBD648A00D18C9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		124122661DBD648A00D18C9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		124122681DBD648A00D18C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1241226D1DBD648A00D18C9C /* VanguardLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VanguardLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		124122711DBD648A00D18C9C /* VanguardLockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanguardLockTests.swift; sourceTree = "<group>"; };
+		124122731DBD648A00D18C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		124122781DBD648A00D18C9C /* VanguardLockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VanguardLockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1241227C1DBD648A00D18C9C /* VanguardLockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanguardLockUITests.swift; sourceTree = "<group>"; };
+		1241227E1DBD648A00D18C9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1241228B1DBD661C00D18C9C /* Cloud-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cloud-96.png"; sourceTree = "<group>"; };
+		1241228D1DBD662100D18C9C /* Password Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Password Filled-100.png"; sourceTree = "<group>"; };
+		1241228F1DBD663E00D18C9C /* Add Key Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add Key Filled-50.png"; sourceTree = "<group>"; };
+		124122901DBD663E00D18C9C /* Lock Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lock Filled-100.png"; sourceTree = "<group>"; };
+		124122911DBD663E00D18C9C /* Unlock Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unlock Filled-100.png"; sourceTree = "<group>"; };
+		124122921DBD663E00D18C9C /* Add User Male-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add User Male-100.png"; sourceTree = "<group>"; };
+		124122931DBD663E00D18C9C /* Message-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message-50.png"; sourceTree = "<group>"; };
+		124122991DBD669400D18C9C /* Exit-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Exit-50.png"; sourceTree = "<group>"; };
+		1241229C1DBD67D200D18C9C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1241229E1DBD682300D18C9C /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		124122A01DBD698A00D18C9C /* Contacts-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contacts-100.png"; sourceTree = "<group>"; };
+		124122A21DBD699800D18C9C /* Password Check-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Password Check-50.png"; sourceTree = "<group>"; };
+		124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userInterfaceViewController.swift; sourceTree = "<group>"; };
+		124122B21DBDA84A00D18C9C /* Home Automation-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home Automation-30.png"; sourceTree = "<group>"; };
+		124122B31DBDA84A00D18C9C /* Home Automation Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home Automation Filled-30.png"; sourceTree = "<group>"; };
+		124122B61DBE598700D18C9C /* Key Filled-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key Filled-75.png"; sourceTree = "<group>"; };
+		124122B71DBE598700D18C9C /* Key Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key Filled-50.png"; sourceTree = "<group>"; };
+		124122B81DBE598700D18C9C /* Key Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key Filled-30.png"; sourceTree = "<group>"; };
+		124122B91DBE598700D18C9C /* Key_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Key_75.png; sourceTree = "<group>"; };
+		124122BA1DBE598700D18C9C /* Key-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key-30.png"; sourceTree = "<group>"; };
+		124122BB1DBE598700D18C9C /* Key-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key-50.png"; sourceTree = "<group>"; };
+		124122C21DBE8AAF00D18C9C /* Door Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Door Filled-50.png"; sourceTree = "<group>"; };
+		1243C8661DCB002000773481 /* Lock 2-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lock 2-30.png"; sourceTree = "<group>"; };
+		1243C8671DCB002000773481 /* Lock 2 Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lock 2 Filled-30.png"; sourceTree = "<group>"; };
+		125136901DDA7F2100D85500 /* ManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
+		12625A4B1DC7CE430021528A /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		12715C451DF8682400B1F640 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockTableViewCell.swift; sourceTree = "<group>"; };
+		12BFB0631DF66E5D00FD8F49 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		12BFB0691DF675D400FD8F49 /* ActivityLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLog.swift; sourceTree = "<group>"; };
+		2CDB50321DDD5B29007AEC10 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Property Time Filled-30.png"; sourceTree = "<group>"; };
+		2CDB50351DDE0F45007AEC10 /* Property Time-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Property Time-30.png"; sourceTree = "<group>"; };
+		2CDB50381DDE105D007AEC10 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2CDB503B1DDE1260007AEC10 /* LogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsTableViewController.swift; sourceTree = "<group>"; };
+		2CDB503D1DDE1E24007AEC10 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2CDB503F1DDE20A7007AEC10 /* Gender Neutral User Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gender Neutral User Filled-30.png"; sourceTree = "<group>"; };
+		2CDB50401DDE20A7007AEC10 /* Gender Neutral User-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gender Neutral User-30.png"; sourceTree = "<group>"; };
+		2CDB50431DDE222D007AEC10 /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		124122561DBD648A00D18C9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1241226A1DBD648A00D18C9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124122751DBD648A00D18C9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		124122501DBD648A00D18C9C = {
+			isa = PBXGroup;
+			children = (
+				1241225B1DBD648A00D18C9C /* VanguardLock */,
+				124122701DBD648A00D18C9C /* VanguardLockTests */,
+				1241227B1DBD648A00D18C9C /* VanguardLockUITests */,
+				1241225A1DBD648A00D18C9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1241225A1DBD648A00D18C9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				124122591DBD648A00D18C9C /* VanguardLock.app */,
+				1241226D1DBD648A00D18C9C /* VanguardLockTests.xctest */,
+				124122781DBD648A00D18C9C /* VanguardLockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1241225B1DBD648A00D18C9C /* VanguardLock */ = {
+			isa = PBXGroup;
+			children = (
+				12625A4A1DC7CE2B0021528A /* classes */,
+				1241229B1DBD67B100D18C9C /* controllers */,
+				1241225C1DBD648A00D18C9C /* AppDelegate.swift */,
+				124122601DBD648A00D18C9C /* Main.storyboard */,
+				124122631DBD648A00D18C9C /* Assets.xcassets */,
+				1241228A1DBD661000D18C9C /* images */,
+				124122651DBD648A00D18C9C /* LaunchScreen.storyboard */,
+				124122681DBD648A00D18C9C /* Info.plist */,
+			);
+			path = VanguardLock;
+			sourceTree = "<group>";
+		};
+		124122701DBD648A00D18C9C /* VanguardLockTests */ = {
+			isa = PBXGroup;
+			children = (
+				124122711DBD648A00D18C9C /* VanguardLockTests.swift */,
+				124122731DBD648A00D18C9C /* Info.plist */,
+			);
+			path = VanguardLockTests;
+			sourceTree = "<group>";
+		};
+		1241227B1DBD648A00D18C9C /* VanguardLockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1241227C1DBD648A00D18C9C /* VanguardLockUITests.swift */,
+				1241227E1DBD648A00D18C9C /* Info.plist */,
+			);
+			path = VanguardLockUITests;
+			sourceTree = "<group>";
+		};
+		1241228A1DBD661000D18C9C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1241228F1DBD663E00D18C9C /* Add Key Filled-50.png */,
+				124122921DBD663E00D18C9C /* Add User Male-100.png */,
+				1241228B1DBD661C00D18C9C /* Cloud-96.png */,
+				124122A01DBD698A00D18C9C /* Contacts-100.png */,
+				124122C21DBE8AAF00D18C9C /* Door Filled-50.png */,
+				124122991DBD669400D18C9C /* Exit-50.png */,
+				2CDB503F1DDE20A7007AEC10 /* Gender Neutral User Filled-30.png */,
+				2CDB50401DDE20A7007AEC10 /* Gender Neutral User-30.png */,
+				124122B31DBDA84A00D18C9C /* Home Automation Filled-30.png */,
+				124122B21DBDA84A00D18C9C /* Home Automation-30.png */,
+				1237F4071DF9242700C0A61B /* home.jpg */,
+				124122B81DBE598700D18C9C /* Key Filled-30.png */,
+				124122B71DBE598700D18C9C /* Key Filled-50.png */,
+				124122B61DBE598700D18C9C /* Key Filled-75.png */,
+				124122B91DBE598700D18C9C /* Key_75.png */,
+				124122BA1DBE598700D18C9C /* Key-30.png */,
+				124122BB1DBE598700D18C9C /* Key-50.png */,
+				1243C8671DCB002000773481 /* Lock 2 Filled-30.png */,
+				1243C8661DCB002000773481 /* Lock 2-30.png */,
+				124122901DBD663E00D18C9C /* Lock Filled-100.png */,
+				124122931DBD663E00D18C9C /* Message-50.png */,
+				124122A21DBD699800D18C9C /* Password Check-50.png */,
+				1241228D1DBD662100D18C9C /* Password Filled-100.png */,
+				2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */,
+				2CDB50351DDE0F45007AEC10 /* Property Time-30.png */,
+				124122911DBD663E00D18C9C /* Unlock Filled-100.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		1241229B1DBD67B100D18C9C /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1210023C1DC7F3720079C7AA /* AddLockViewController.swift */,
+				12715C451DF8682400B1F640 /* AddUserViewController.swift */,
+				1241225E1DBD648A00D18C9C /* HomeViewController.swift */,
+				128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */,
+				1241229C1DBD67D200D18C9C /* LoginViewController.swift */,
+				2CDB503B1DDE1260007AEC10 /* LogsTableViewController.swift */,
+				2CDB50381DDE105D007AEC10 /* MainTabBarController.swift */,
+				125136901DDA7F2100D85500 /* ManagementViewController.swift */,
+				1241229E1DBD682300D18C9C /* RegistrationViewController.swift */,
+				124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */,
+				2CDB50431DDE222D007AEC10 /* UsersTableViewController.swift */,
+				1237F4091DF944D000C0A61B /* AuthorizedLockTableViewController.swift */,
+				1237F40D1DF9489A00C0A61B /* ALockTableViewCell.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		12625A4A1DC7CE2B0021528A /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				12625A4B1DC7CE430021528A /* Lock.swift */,
+				2CDB50321DDD5B29007AEC10 /* MapPin.swift */,
+				2CDB503D1DDE1E24007AEC10 /* User.swift */,
+				12BFB0631DF66E5D00FD8F49 /* Constant.swift */,
+				12BFB0691DF675D400FD8F49 /* ActivityLog.swift */,
+				1237F4051DF8E31000C0A61B /* Log.swift */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		124122581DBD648A00D18C9C /* VanguardLock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 124122811DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLock" */;
+			buildPhases = (
+				124122551DBD648A00D18C9C /* Sources */,
+				124122561DBD648A00D18C9C /* Frameworks */,
+				124122571DBD648A00D18C9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VanguardLock;
+			productName = VanguardLock;
+			productReference = 124122591DBD648A00D18C9C /* VanguardLock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1241226C1DBD648A00D18C9C /* VanguardLockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 124122841DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockTests" */;
+			buildPhases = (
+				124122691DBD648A00D18C9C /* Sources */,
+				1241226A1DBD648A00D18C9C /* Frameworks */,
+				1241226B1DBD648A00D18C9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1241226F1DBD648A00D18C9C /* PBXTargetDependency */,
+			);
+			name = VanguardLockTests;
+			productName = VanguardLockTests;
+			productReference = 1241226D1DBD648A00D18C9C /* VanguardLockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		124122771DBD648A00D18C9C /* VanguardLockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 124122871DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockUITests" */;
+			buildPhases = (
+				124122741DBD648A00D18C9C /* Sources */,
+				124122751DBD648A00D18C9C /* Frameworks */,
+				124122761DBD648A00D18C9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1241227A1DBD648A00D18C9C /* PBXTargetDependency */,
+			);
+			name = VanguardLockUITests;
+			productName = VanguardLockUITests;
+			productReference = 124122781DBD648A00D18C9C /* VanguardLockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		124122511DBD648A00D18C9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Michael Nguyen";
+				TargetAttributes = {
+					124122581DBD648A00D18C9C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = UH8XQ58787;
+						ProvisioningStyle = Automatic;
+					};
+					1241226C1DBD648A00D18C9C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 124122581DBD648A00D18C9C;
+					};
+					124122771DBD648A00D18C9C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 124122581DBD648A00D18C9C;
+					};
+				};
+			};
+			buildConfigurationList = 124122541DBD648A00D18C9C /* Build configuration list for PBXProject "VanguardLock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 124122501DBD648A00D18C9C;
+			productRefGroup = 1241225A1DBD648A00D18C9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				124122581DBD648A00D18C9C /* VanguardLock */,
+				1241226C1DBD648A00D18C9C /* VanguardLockTests */,
+				124122771DBD648A00D18C9C /* VanguardLockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		124122571DBD648A00D18C9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CDB50421DDE20A7007AEC10 /* Gender Neutral User-30.png in Resources */,
+				124122971DBD663E00D18C9C /* Add User Male-100.png in Resources */,
+				124122941DBD663E00D18C9C /* Add Key Filled-50.png in Resources */,
+				1243C8691DCB002000773481 /* Lock 2 Filled-30.png in Resources */,
+				124122671DBD648A00D18C9C /* LaunchScreen.storyboard in Resources */,
+				124122BE1DBE598700D18C9C /* Key Filled-30.png in Resources */,
+				2CDB50371DDE0F45007AEC10 /* Property Time-30.png in Resources */,
+				124122BF1DBE598700D18C9C /* Key_75.png in Resources */,
+				124122C31DBE8AAF00D18C9C /* Door Filled-50.png in Resources */,
+				2CDB50411DDE20A7007AEC10 /* Gender Neutral User Filled-30.png in Resources */,
+				124122961DBD663E00D18C9C /* Unlock Filled-100.png in Resources */,
+				124122B51DBDA84A00D18C9C /* Home Automation Filled-30.png in Resources */,
+				124122C11DBE598700D18C9C /* Key-50.png in Resources */,
+				124122951DBD663E00D18C9C /* Lock Filled-100.png in Resources */,
+				124122BC1DBE598700D18C9C /* Key Filled-75.png in Resources */,
+				124122641DBD648A00D18C9C /* Assets.xcassets in Resources */,
+				124122BD1DBE598700D18C9C /* Key Filled-50.png in Resources */,
+				1241228E1DBD662100D18C9C /* Password Filled-100.png in Resources */,
+				124122B41DBDA84A00D18C9C /* Home Automation-30.png in Resources */,
+				1241228C1DBD661C00D18C9C /* Cloud-96.png in Resources */,
+				124122C01DBE598700D18C9C /* Key-30.png in Resources */,
+				2CDB50361DDE0F45007AEC10 /* Property Time Filled-30.png in Resources */,
+				124122A31DBD699800D18C9C /* Password Check-50.png in Resources */,
+				1243C8681DCB002000773481 /* Lock 2-30.png in Resources */,
+				124122A11DBD698A00D18C9C /* Contacts-100.png in Resources */,
+				124122981DBD663E00D18C9C /* Message-50.png in Resources */,
+				1241229A1DBD669400D18C9C /* Exit-50.png in Resources */,
+				1237F4081DF9242700C0A61B /* home.jpg in Resources */,
+				124122621DBD648A00D18C9C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1241226B1DBD648A00D18C9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124122761DBD648A00D18C9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		124122551DBD648A00D18C9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12715C461DF8682400B1F640 /* AddUserViewController.swift in Sources */,
+				2CDB503E1DDE1E24007AEC10 /* User.swift in Sources */,
+				1237F4061DF8E31000C0A61B /* Log.swift in Sources */,
+				2CDB503C1DDE1260007AEC10 /* LogsTableViewController.swift in Sources */,
+				1237F40E1DF9489A00C0A61B /* ALockTableViewCell.swift in Sources */,
+				12BFB0641DF66E5D00FD8F49 /* Constant.swift in Sources */,
+				1241229D1DBD67D200D18C9C /* LoginViewController.swift in Sources */,
+				1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */,
+				2CDB50391DDE105D007AEC10 /* MainTabBarController.swift in Sources */,
+				1241229F1DBD682300D18C9C /* RegistrationViewController.swift in Sources */,
+				1241225D1DBD648A00D18C9C /* AppDelegate.swift in Sources */,
+				12625A4C1DC7CE430021528A /* Lock.swift in Sources */,
+				124122A51DBD7CD400D18C9C /* userInterfaceViewController.swift in Sources */,
+				2CDB50331DDD5B29007AEC10 /* MapPin.swift in Sources */,
+				12BFB06A1DF675D400FD8F49 /* ActivityLog.swift in Sources */,
+				128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */,
+				1237F40A1DF944D000C0A61B /* AuthorizedLockTableViewController.swift in Sources */,
+				1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */,
+				2CDB50441DDE222D007AEC10 /* UsersTableViewController.swift in Sources */,
+				125136911DDA7F2100D85500 /* ManagementViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124122691DBD648A00D18C9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				124122721DBD648A00D18C9C /* VanguardLockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		124122741DBD648A00D18C9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1241227D1DBD648A00D18C9C /* VanguardLockUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1241226F1DBD648A00D18C9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 124122581DBD648A00D18C9C /* VanguardLock */;
+			targetProxy = 1241226E1DBD648A00D18C9C /* PBXContainerItemProxy */;
+		};
+		1241227A1DBD648A00D18C9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 124122581DBD648A00D18C9C /* VanguardLock */;
+			targetProxy = 124122791DBD648A00D18C9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		124122601DBD648A00D18C9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				124122611DBD648A00D18C9C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		124122651DBD648A00D18C9C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				124122661DBD648A00D18C9C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1241227F1DBD648A00D18C9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		124122801DBD648A00D18C9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		124122821DBD648A00D18C9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UH8XQ58787;
+				INFOPLIST_FILE = VanguardLock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = computing.VanguardLock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		124122831DBD648A00D18C9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UH8XQ58787;
+				INFOPLIST_FILE = VanguardLock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = computing.VanguardLock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		124122851DBD648A00D18C9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VanguardLockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VanguardLock.app/VanguardLock";
+			};
+			name = Debug;
+		};
+		124122861DBD648A00D18C9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VanguardLockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VanguardLock.app/VanguardLock";
+			};
+			name = Release;
+		};
+		124122881DBD648A00D18C9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = VanguardLockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = VanguardLock;
+			};
+			name = Debug;
+		};
+		124122891DBD648A00D18C9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = VanguardLockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vanguardLock.VanguardLockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = VanguardLock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		124122541DBD648A00D18C9C /* Build configuration list for PBXProject "VanguardLock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1241227F1DBD648A00D18C9C /* Debug */,
+				124122801DBD648A00D18C9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		124122811DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				124122821DBD648A00D18C9C /* Debug */,
+				124122831DBD648A00D18C9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		124122841DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				124122851DBD648A00D18C9C /* Debug */,
+				124122861DBD648A00D18C9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		124122871DBD648A00D18C9C /* Build configuration list for PBXNativeTarget "VanguardLockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				124122881DBD648A00D18C9C /* Debug */,
+				124122891DBD648A00D18C9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 124122511DBD648A00D18C9C /* Project object */;
+}

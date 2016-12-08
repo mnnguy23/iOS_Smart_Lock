@@ -20,6 +20,9 @@ class AddLockViewController: UIViewController{
     @IBOutlet weak var repeatSerialNumberTextField: UITextField!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var stateTextField: UITextField!
+    @IBOutlet weak var zipcodeTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +53,10 @@ class AddLockViewController: UIViewController{
             if segue.identifier == "saveLockDetail" {
                 let serialNumber = self.serialNumberTextField.text!
                 let name = self.nameField.text!
-                let address = self.addressTextField.text!
+                let address = "\(self.addressTextField.text!), \(cityTextField.text!), \(stateTextField.text!) \(zipcodeTextField.text!)"
                 let id = self.newLockID
                 createLock(name: name, number: serialNumber, address: address)
-                self.lock = Lock(lockId: id, owner: owner, name: name, location: address, serialNumber: serialNumber)
+                self.lock = Lock(lockId: id, owner: owner, name: name, location: address, serialNumber: serialNumber, locked: false)
             }
     }
     
@@ -64,11 +67,23 @@ class AddLockViewController: UIViewController{
                 if !(serialNumberTextField.text?.isEmpty)! {
                     if !(repeatSerialNumberTextField.text?.isEmpty)! {
                         if !(addressTextField.text?.isEmpty)! {
-                            if serialNumberTextField.text! == repeatSerialNumberTextField.text! {
-                                    createAlert(title: "Success", message: "Device successfully added!")
-                                    result = true
+                            if !(cityTextField.text?.isEmpty)! {
+                                if !(stateTextField.text?.isEmpty)! {
+                                    if !(zipcodeTextField.text?.isEmpty)! {
+                                        if serialNumberTextField.text! == repeatSerialNumberTextField.text! {
+                                                createAlert(title: "Success", message: "Device successfully added!")
+                                                result = true
+                                        } else {
+                                            createAlert(title: "Error", message: "Values do not match.")
+                                        }
+                                    } else {
+                                        createAlert(title: "Error", message: "Value missing from Zip Code Field")
+                                    }
+                                } else {
+                                    createAlert(title: "Error", message: "Value missing from State field")
+                                }
                             } else {
-                                createAlert(title: "Error", message: "Values do not match.")
+                                createAlert(title: "Error", message: "Value missing from City field")
                             }
                         } else {
                             createAlert(title: "No Address", message: "Value missing from address field")

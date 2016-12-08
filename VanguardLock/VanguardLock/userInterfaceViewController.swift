@@ -15,9 +15,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     let lockImages: [UIImage] = [#imageLiteral(resourceName: "Lock Filled-100.png"), #imageLiteral(resourceName: "Unlock Filled-100.png")]
     var lockEnabledStored = false
     var currentLock:Lock?
-    var locks:[Lock] = []
-    let lockEndPoint = "\(Constant.BASE_API)/lock/all"
- 
+    var ownedLocks:[Lock] = []
     @IBOutlet weak var addLockButton: UIButton!
     @IBOutlet weak var addLockLabel: UILabel!
     @IBOutlet weak var locksTableView: UITableView!
@@ -29,7 +27,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         self.locksTableView.delegate = self
         self.locksTableView.dataSource = self
-        getLocks()
+        self.locksTableView.rowHeight = 40.0
         updateTabBarData()
         // Do any additional setup after loading the view.
     }
@@ -42,7 +40,9 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        lockEnabledStored = UserDefaults.standard.bool(forKey: Constant.LOCK_KEY)
+        let tabVC = self.tabBarController as! MainTabBarController
+        self.ownedLocks = tabVC.ownedlocks
+        self.locksTableView.reloadData()
       //  checkLockValue(lockValue: lockEnabledStored)
     }
     
@@ -52,18 +52,6 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         UserDefaults.standard.synchronize()
         
         confirmationMessage(message: "Successfully logged out.")
-    }
-    
-    @IBAction func lockAccess(_ sender: AnyObject) {
-        lockEnabledStored = UserDefaults.standard.bool(forKey: Constant.LOCK_KEY)
-        if(lockEnabledStored) {
-            UserDefaults.standard.set(false, forKey: Constant.LOCK_KEY)
-            UserDefaults.standard.synchronize()
-        } else {
-            UserDefaults.standard.set(true, forKey: Constant.LOCK_KEY)
-            UserDefaults.standard.synchronize()
-        }
-        lockEnabledStored = UserDefaults.standard.bool(forKey: Constant.LOCK_KEY)
     }
     
 
@@ -83,7 +71,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     @IBAction func saveLock(unwindSegue: UIStoryboardSegue) {
         if let lockDetailsViewController = unwindSegue.source as? AddLockViewController {
             if let lock = lockDetailsViewController.lock {
-                locks.append(lock)
+                ownedLocks.append(lock)
             }
             self.updateTabBarData()
             self.locksTableView.reloadData()
@@ -95,31 +83,40 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return self.locks.count
+        return self.ownedLocks.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Owned Lock(s)"
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell:LockTableViewCell = self.locksTableView.dequeueReusableCell(withIdentifier: "cell")! as! LockTableViewCell
-        cell = returnLockCell(lock: self.locks[indexPath.row], cell: cell)
+        cell = returnLockCell(lock: self.ownedLocks[indexPath.row], cell: cell)
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        toggleLock(lock: locks[indexPath.row])
-        self.locksTableView.reloadRows(at: [indexPath], with: .none)
+        toggleLock(lock: ownedLocks[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 35.0
     }
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: "Delete", handler: {action, index in
-            self.locks.remove(at: indexPath.row)
+            self.deleteLock(row: indexPath.row)
+            self.ownedLocks.remove(at: indexPath.row)
             self.locksTableView.deleteRows(at: [indexPath], with: .automatic)
+            
             self.updateTabBarData()
             
         })
         delete.backgroundColor = UIColor.red
         
         let map = UITableViewRowAction(style: .normal, title: "Map", handler: {action, index in
-            self.currentLock = self.locks[indexPath.row]
+            self.currentLock = self.ownedLocks[indexPath.row]
             self.performSegue(withIdentifier: "managementSegue", sender: nil)
         })
         map.backgroundColor = UIColor.green
@@ -127,6 +124,46 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         
         return [delete, map]
         
+    }
+    /// TODO: Come back to this part when the correct endpoint is working
+    private func deleteLock(row: Int) {
+        print("row: \(row)")
+        let lockId = self.ownedLocks[row].lockId
+        let removeEndPoint = "\(Constant.BASE_API)/lock/remove/\(lockId)"
+        print("lock id: \(lockId)")
+        guard let url = URL(string: removeEndPoint) else {
+            print("Could not create URL")
+            return
+        }
+        var urlRequest = URLRequest(url: url)
+        let session = URLSession.shared
+        
+        DispatchQueue.main.async {
+            let task = session.dataTask(with: urlRequest,
+                                        completionHandler: { data, response, error in
+                                            if error != nil {
+                                                print("Error found \(error)")
+                                                return
+                                            }
+                                            
+                                            guard let responseData = data else {
+                                                print("No data")
+                                                return
+                                            }
+                                            
+                                            do {
+                                                guard let receivedData = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? Any else {
+                                                    print("Could not get JSON from responseData as Any")
+                                                    return
+                                                }
+                                                print("Recieved data: \(receivedData)")
+                                            } catch {
+                                                print("error parsing response from lock_user_auth/lock/\(lockId)")
+                                                return
+                                            }
+            })
+            task.resume()
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -143,43 +180,69 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         cell.lock = lock
         
         if(cell.lock.locked) {
-            cell.lockButton.setImage(lockImages[0], for: .normal)
-            cell.lockButton.backgroundColor = UIColor.white.withAlphaComponent(1.0)
-            cell.lockButton.tintColor = UIColor.green
-            
+            cell.lockImageView.image = lockImages[0]
+            cell.lockImageView.layer.borderWidth = 1
+            cell.lockImageView.layer.masksToBounds = false
+            cell.lockImageView.layer.cornerRadius = cell.lockImageView.frame.height/6
+            cell.lockImageView.backgroundColor = UIColor.green
+            cell.lockImageView.layer.borderColor = UIColor.green.cgColor
         } else {
-            cell.lockButton.backgroundColor = UIColor.white.withAlphaComponent(1.0)
-            cell.lockButton.setImage(lockImages[1], for: .normal)
-            cell.lockButton.tintColor = UIColor.red
+            cell.lockImageView.backgroundColor = UIColor.red
+            cell.lockImageView.image = lockImages[1]
+            cell.lockImageView.layer.borderWidth = 1
+            cell.lockImageView.layer.masksToBounds = false
+            cell.lockImageView.layer.cornerRadius = cell.lockImageView.frame.height/6
+            cell.lockImageView.layer.borderColor = UIColor.red.cgColor
         }
-        print(cell.lock.locked)
         return cell
     }
     
     func toggleLock(lock: Lock) {
-        var lockStatus:String
+        var toggleLockEndPoint:String = "https://smartlock-jt.herokuapp.com/"
         if lock.locked {
-            lock.locked = false
-            lockStatus = "Unlocked"
+            toggleLockEndPoint = toggleLockEndPoint + "unlock/\(lock.lockId)"
         } else {
-            lock.locked = true
-            lockStatus = "Locked"
+            toggleLockEndPoint = toggleLockEndPoint + "lock/\(lock.lockId)"
         }
-        let date = NSDate()
-        let calender = NSCalendar.current
-        let hour = calender.component(.hour, from: date as Date)
-        let minutes = calender.component(.minute, from: date as Date)
-        let day = calender.component(.day, from: date as Date)
-        let month = calender.component(.month, from: date as Date)
-        let year = calender.component(.year, from: date as Date)
+        guard let toggleLockURL = URL(string: toggleLockEndPoint) else {
+            print("Error: cannot create url")
+            return
+        }
         
-        let completeTime = "Day: \(year)-\(month)-\(day) Time: \(hour)-\(minutes)"
-
-        lock.lockStatus.append(lockStatus)
-        lock.logs.append(completeTime)
-        updateTabBarData()
+        let toggleLockUrlRequest = URLRequest(url: toggleLockURL)
+        let session = URLSession.shared
+        
+        DispatchQueue.main.async {
+            print(toggleLockUrlRequest)
+            let task = session.dataTask(with: toggleLockUrlRequest,
+                                        completionHandler: { data, response, error in
+                                            if error != nil {
+                                                print("Error found \(error)")
+                                                return
+                                            }
+                                            guard let responseData = data else {
+                                                print("No data")
+                                                return
+                                            }
+                                            
+                                            do {
+                                                guard let jsonLock = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? [String:AnyObject] else {
+                                                    print("Could not get JSON from responseData as [String:AnyObject]")
+                                                    return
+                                                }
+                                                let isLocked = jsonLock["lock_state"] as! Bool
+                                                lock.locked = isLocked
+                                            } catch  let error as Error {
+                                                print("error parsing response from POST on \(toggleLockEndPoint)")
+                                                print(error)
+                                                return
+                                            }
+                                            self.locksTableView.reloadData()
+            })
+            task.resume()
+        }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "managementSegue" {
             if let managementVC = segue.destination as? ManagementViewController {
@@ -192,60 +255,6 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     
     func updateTabBarData() {
         let tbvc = self.tabBarController as! MainTabBarController
-        tbvc.locks = self.locks
-    }
-    
-    private func getLocks() {
-        guard let url = URL(string: lockEndPoint) else {
-            print("Could not create URL")
-            return
-        }
-        
-        let urlRequest = URLRequest(url: url)
-        let session = URLSession.shared
-        
-        DispatchQueue.main.async {
-            let task = session.dataTask(with: urlRequest,
-                                        completionHandler: {(data, response, error) in
-                                            if error != nil {
-                                                print("Error found \(error)")
-                                                return
-                                            }
-                                            
-                                            guard let responseData = data else {
-                                                print("No data")
-                                                return
-                                            }
-                                            
-                                            do {
-                                                guard let jsonLocks = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? [AnyObject] else {
-                                                    print("could not get JSON from responseData as NSArray")
-                                                    return
-                                                }
-                                                print(jsonLocks)
-                                                
-                                                for jsonLock in jsonLocks {
-                                                    let lockData = jsonLock as! [String: AnyObject]
-                                                    let name = lockData["lock_name"] as! String
-                                                    let owner = lockData["owner"] as! Int
-                                                    let address = lockData["address"] as! String
-                                                    let id = lockData["lock_id"] as! Int
-                                                    let serialNumber = lockData["serial_number"] as! String
-                                                    let currentUser = UserDefaults.standard.integer(forKey: Constant.USER_ID)
-                                                    if(owner == currentUser) {
-                                                        var newLock:Lock = Lock(lockId: id, owner: owner, name: name, location: address, serialNumber: serialNumber)
-                                                        self.locks.append(newLock)
-                                                    }
-                                                    
-                                                }
-                                                
-                                            } catch {
-                                                print("error parsing response from /lock/all")
-                                                return
-                                            }
-                                            self.locksTableView.reloadData()
-            })
-            task.resume()
-        }
+        tbvc.ownedlocks = self.ownedLocks
     }
 }

@@ -1,23 +1,19 @@
 //
-//  LockTableViewCell.swift
+//  ALockTableViewCell.swift
 //  VanguardLock
 //
-//  Created by Michael Nguyen on 11/7/16.
+//  Created by Michael Nguyen on 12/8/16.
 //  Copyright © 2016 Michael Nguyen. All rights reserved.
 //
 
 import UIKit
 
-class LockTableViewCell: UITableViewCell {
+class ALockTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lockLabel: UILabel!
-    @IBOutlet weak var lockImageView: UIImageView!
-    
-    var lock:Lock!
-
+    @IBOutlet weak var lockImage: UIImageView!
     
     override func awakeFromNib() {
-        
         super.awakeFromNib()
         // Initialization code
     }
@@ -27,4 +23,5 @@ class LockTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 }

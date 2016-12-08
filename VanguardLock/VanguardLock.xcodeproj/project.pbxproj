@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210023C1DC7F3720079C7AA /* AddLockViewController.swift */; };
+		1237F4061DF8E31000C0A61B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237F4051DF8E31000C0A61B /* Log.swift */; };
+		1237F4081DF9242700C0A61B /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1237F4071DF9242700C0A61B /* home.jpg */; };
+		1237F40A1DF944D000C0A61B /* AuthorizedLockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237F4091DF944D000C0A61B /* AuthorizedLockTableViewController.swift */; };
+		1237F40E1DF9489A00C0A61B /* ALockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237F40D1DF9489A00C0A61B /* ALockTableViewCell.swift */; };
 		1241225D1DBD648A00D18C9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241225C1DBD648A00D18C9C /* AppDelegate.swift */; };
 		1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241225E1DBD648A00D18C9C /* HomeViewController.swift */; };
 		124122621DBD648A00D18C9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124122601DBD648A00D18C9C /* Main.storyboard */; };
@@ -41,6 +45,7 @@
 		1243C8691DCB002000773481 /* Lock 2 Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 1243C8671DCB002000773481 /* Lock 2 Filled-30.png */; };
 		125136911DDA7F2100D85500 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125136901DDA7F2100D85500 /* ManagementViewController.swift */; };
 		12625A4C1DC7CE430021528A /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12625A4B1DC7CE430021528A /* Lock.swift */; };
+		12715C461DF8682400B1F640 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12715C451DF8682400B1F640 /* AddUserViewController.swift */; };
 		128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */; };
 		12BFB0641DF66E5D00FD8F49 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFB0631DF66E5D00FD8F49 /* Constant.swift */; };
 		12BFB06A1DF675D400FD8F49 /* ActivityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFB0691DF675D400FD8F49 /* ActivityLog.swift */; };
@@ -74,6 +79,10 @@
 
 /* Begin PBXFileReference section */
 		1210023C1DC7F3720079C7AA /* AddLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLockViewController.swift; sourceTree = "<group>"; };
+		1237F4051DF8E31000C0A61B /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		1237F4071DF9242700C0A61B /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
+		1237F4091DF944D000C0A61B /* AuthorizedLockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizedLockTableViewController.swift; sourceTree = "<group>"; };
+		1237F40D1DF9489A00C0A61B /* ALockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALockTableViewCell.swift; sourceTree = "<group>"; };
 		124122591DBD648A00D18C9C /* VanguardLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VanguardLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1241225C1DBD648A00D18C9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1241225E1DBD648A00D18C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +122,7 @@
 		1243C8671DCB002000773481 /* Lock 2 Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lock 2 Filled-30.png"; sourceTree = "<group>"; };
 		125136901DDA7F2100D85500 /* ManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		12625A4B1DC7CE430021528A /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		12715C451DF8682400B1F640 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockTableViewCell.swift; sourceTree = "<group>"; };
 		12BFB0631DF66E5D00FD8F49 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		12BFB0691DF675D400FD8F49 /* ActivityLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLog.swift; sourceTree = "<group>"; };
@@ -208,31 +218,32 @@
 		1241228A1DBD661000D18C9C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1241228F1DBD663E00D18C9C /* Add Key Filled-50.png */,
+				124122921DBD663E00D18C9C /* Add User Male-100.png */,
+				1241228B1DBD661C00D18C9C /* Cloud-96.png */,
+				124122A01DBD698A00D18C9C /* Contacts-100.png */,
+				124122C21DBE8AAF00D18C9C /* Door Filled-50.png */,
+				124122991DBD669400D18C9C /* Exit-50.png */,
 				2CDB503F1DDE20A7007AEC10 /* Gender Neutral User Filled-30.png */,
 				2CDB50401DDE20A7007AEC10 /* Gender Neutral User-30.png */,
-				2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */,
-				2CDB50351DDE0F45007AEC10 /* Property Time-30.png */,
-				1243C8661DCB002000773481 /* Lock 2-30.png */,
-				1243C8671DCB002000773481 /* Lock 2 Filled-30.png */,
-				124122C21DBE8AAF00D18C9C /* Door Filled-50.png */,
-				124122B61DBE598700D18C9C /* Key Filled-75.png */,
-				124122B71DBE598700D18C9C /* Key Filled-50.png */,
+				124122B31DBDA84A00D18C9C /* Home Automation Filled-30.png */,
+				124122B21DBDA84A00D18C9C /* Home Automation-30.png */,
+				1237F4071DF9242700C0A61B /* home.jpg */,
 				124122B81DBE598700D18C9C /* Key Filled-30.png */,
+				124122B71DBE598700D18C9C /* Key Filled-50.png */,
+				124122B61DBE598700D18C9C /* Key Filled-75.png */,
 				124122B91DBE598700D18C9C /* Key_75.png */,
 				124122BA1DBE598700D18C9C /* Key-30.png */,
 				124122BB1DBE598700D18C9C /* Key-50.png */,
-				124122B21DBDA84A00D18C9C /* Home Automation-30.png */,
-				124122B31DBDA84A00D18C9C /* Home Automation Filled-30.png */,
-				124122A21DBD699800D18C9C /* Password Check-50.png */,
-				124122A01DBD698A00D18C9C /* Contacts-100.png */,
-				124122991DBD669400D18C9C /* Exit-50.png */,
-				1241228F1DBD663E00D18C9C /* Add Key Filled-50.png */,
+				1243C8671DCB002000773481 /* Lock 2 Filled-30.png */,
+				1243C8661DCB002000773481 /* Lock 2-30.png */,
 				124122901DBD663E00D18C9C /* Lock Filled-100.png */,
-				124122911DBD663E00D18C9C /* Unlock Filled-100.png */,
-				124122921DBD663E00D18C9C /* Add User Male-100.png */,
 				124122931DBD663E00D18C9C /* Message-50.png */,
+				124122A21DBD699800D18C9C /* Password Check-50.png */,
 				1241228D1DBD662100D18C9C /* Password Filled-100.png */,
-				1241228B1DBD661C00D18C9C /* Cloud-96.png */,
+				2CDB50341DDE0F45007AEC10 /* Property Time Filled-30.png */,
+				2CDB50351DDE0F45007AEC10 /* Property Time-30.png */,
+				124122911DBD663E00D18C9C /* Unlock Filled-100.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -240,16 +251,19 @@
 		1241229B1DBD67B100D18C9C /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1210023C1DC7F3720079C7AA /* AddLockViewController.swift */,
+				12715C451DF8682400B1F640 /* AddUserViewController.swift */,
 				1241225E1DBD648A00D18C9C /* HomeViewController.swift */,
+				128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */,
 				1241229C1DBD67D200D18C9C /* LoginViewController.swift */,
+				2CDB503B1DDE1260007AEC10 /* LogsTableViewController.swift */,
+				2CDB50381DDE105D007AEC10 /* MainTabBarController.swift */,
+				125136901DDA7F2100D85500 /* ManagementViewController.swift */,
 				1241229E1DBD682300D18C9C /* RegistrationViewController.swift */,
 				124122A41DBD7CD400D18C9C /* userInterfaceViewController.swift */,
-				1210023C1DC7F3720079C7AA /* AddLockViewController.swift */,
-				128B7EFF1DD0EEB0005CEA53 /* LockTableViewCell.swift */,
-				125136901DDA7F2100D85500 /* ManagementViewController.swift */,
-				2CDB50381DDE105D007AEC10 /* MainTabBarController.swift */,
-				2CDB503B1DDE1260007AEC10 /* LogsTableViewController.swift */,
 				2CDB50431DDE222D007AEC10 /* UsersTableViewController.swift */,
+				1237F4091DF944D000C0A61B /* AuthorizedLockTableViewController.swift */,
+				1237F40D1DF9489A00C0A61B /* ALockTableViewCell.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -262,6 +276,7 @@
 				2CDB503D1DDE1E24007AEC10 /* User.swift */,
 				12BFB0631DF66E5D00FD8F49 /* Constant.swift */,
 				12BFB0691DF675D400FD8F49 /* ActivityLog.swift */,
+				1237F4051DF8E31000C0A61B /* Log.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -401,6 +416,7 @@
 				124122A11DBD698A00D18C9C /* Contacts-100.png in Resources */,
 				124122981DBD663E00D18C9C /* Message-50.png in Resources */,
 				1241229A1DBD669400D18C9C /* Exit-50.png in Resources */,
+				1237F4081DF9242700C0A61B /* home.jpg in Resources */,
 				124122621DBD648A00D18C9C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,8 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12715C461DF8682400B1F640 /* AddUserViewController.swift in Sources */,
 				2CDB503E1DDE1E24007AEC10 /* User.swift in Sources */,
+				1237F4061DF8E31000C0A61B /* Log.swift in Sources */,
 				2CDB503C1DDE1260007AEC10 /* LogsTableViewController.swift in Sources */,
+				1237F40E1DF9489A00C0A61B /* ALockTableViewCell.swift in Sources */,
 				12BFB0641DF66E5D00FD8F49 /* Constant.swift in Sources */,
 				1241229D1DBD67D200D18C9C /* LoginViewController.swift in Sources */,
 				1241225F1DBD648A00D18C9C /* HomeViewController.swift in Sources */,
@@ -439,6 +458,7 @@
 				2CDB50331DDD5B29007AEC10 /* MapPin.swift in Sources */,
 				12BFB06A1DF675D400FD8F49 /* ActivityLog.swift in Sources */,
 				128B7F001DD0EEB0005CEA53 /* LockTableViewCell.swift in Sources */,
+				1237F40A1DF944D000C0A61B /* AuthorizedLockTableViewController.swift in Sources */,
 				1210023D1DC7F3720079C7AA /* AddLockViewController.swift in Sources */,
 				2CDB50441DDE222D007AEC10 /* UsersTableViewController.swift in Sources */,
 				125136911DDA7F2100D85500 /* ManagementViewController.swift in Sources */,

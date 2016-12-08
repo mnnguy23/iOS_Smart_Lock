@@ -10,8 +10,10 @@ import Foundation
 
 class User {
     let username:String
-    
-    init(username: String) {
+    let id:Int
+    init(id:Int, username: String) {
+        self.id = id
         self.username = username
+        
     }
 }

@@ -15,8 +15,8 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             let tabBarVC = self.tabBarController as! MainTabBarController
-            self.locks = tabBarVC.ownedlocks
-            self.getUsers()
+            locks = tabBarVC.ownedlocks
+            getUsers()
             self.tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,6 +29,7 @@ class UsersTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         let tabBarVC = self.tabBarController as! MainTabBarController
         self.locks = tabBarVC.ownedlocks
+        getUsers()
         self.tableView.reloadData()
     }
 
@@ -65,7 +66,21 @@ class UsersTableViewController: UITableViewController {
         label.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         let imageView = UIImageView(frame: CGRect(x: 0,y: 0, width: 30,height: 30))
-        imageView.image = UIImage(named: "Unlock Filled-100.png")
+        if locks[section].locked {
+            imageView.image = UIImage(named: "Lock Filled-100.png")
+            imageView.layer.borderWidth = 1
+            imageView.layer.masksToBounds = false
+            imageView.layer.cornerRadius = imageView.frame.height/6
+            imageView.backgroundColor = UIColor.green
+            imageView.layer.borderColor = UIColor.green.cgColor
+        } else {
+            imageView.image = UIImage(named: "Unlock Filled-100.png")
+            imageView.layer.borderWidth = 1
+            imageView.layer.masksToBounds = false
+            imageView.layer.cornerRadius = imageView.frame.height/6
+            imageView.backgroundColor = UIColor.red
+            imageView.layer.borderColor = UIColor.red.cgColor
+        }
         headerView.addSubview(imageView)
         imageView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
         
@@ -270,6 +285,9 @@ class UsersTableViewController: UITableViewController {
                                             guard let jsonUsers = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? [AnyObject] else {
                                                 print("Could not get JSON from jsonUsers as Array")
                                                 return
+                                            }
+                                            for currentLock in self.locks {
+                                                currentLock.users.removeAll()
                                             }
                                             for jsonUser in jsonUsers {
                                                 let currentUser = jsonUser as! [String: AnyObject]

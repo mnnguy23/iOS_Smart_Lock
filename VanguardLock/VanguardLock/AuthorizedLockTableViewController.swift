@@ -110,12 +110,14 @@ class AuthorizedLockTableViewController: UITableViewController {
                                             }
                                             
                                             do {
-                                                guard let jsonLock = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? [String:AnyObject] else {
-                                                    print("Could not get JSON from responseData as [String:AnyObject]")
+                                                guard let jsonLock = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? Bool else {
+                                                    print("Could not get JSON from responseData as Any")
                                                     return
                                                 }
-                                                let isLocked = jsonLock["lock_state"] as! Bool
-                                                lock.locked = isLocked
+                                                
+                                                if !(jsonLock) {
+                                                    self.createAlert(title: "Error", message: "The lock is currently unavailable. Please try again later")
+                                                }
                                             } catch  let error as Error {
                                                 print("error parsing response from POST on \(toggleLockEndPoint)")
                                                 print(error)
@@ -125,6 +127,13 @@ class AuthorizedLockTableViewController: UITableViewController {
             })
             task.resume()
         }
+    }
+    
+    func createAlert(title: String, message: String) {
+        let alertVC = UIAlertController(title: title, message: message , preferredStyle: UIAlertControllerStyle.alert)
+        let alertAct = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertVC.addAction(alertAct)
+        present(alertVC, animated: true, completion: nil)
     }
     /*
     // Override to support conditional editing of the table view.

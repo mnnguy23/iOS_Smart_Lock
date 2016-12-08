@@ -27,7 +27,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         self.locksTableView.delegate = self
         self.locksTableView.dataSource = self
-        self.locksTableView.rowHeight = 40.0
+        self.locksTableView.rowHeight = 50.0
         updateTabBarData()
         // Do any additional setup after loading the view.
     }
@@ -102,7 +102,7 @@ class userInterfaceViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 35.0
+        return 75.0
     }
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: "Delete", handler: {action, index in

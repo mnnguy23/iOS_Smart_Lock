@@ -384,10 +384,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PiA-4n-TEK">
-                                                    <rect key="frame" x="332" y="4.5" width="35" height="35"/>
+                                                    <rect key="frame" x="322" y="-0.5" width="45" height="45"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="hdv-KA-IC3"/>
-                                                        <constraint firstAttribute="width" constant="35" id="uAC-RB-ddr"/>
+                                                        <constraint firstAttribute="height" constant="45" id="hUv-5T-RiV"/>
+                                                        <constraint firstAttribute="width" constant="45" id="jUl-3I-ZaS"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5v-vv-g3K">
